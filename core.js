@@ -6,7 +6,7 @@ var MathLib = {};
 // -- Кузьмин Виталий, 5302.
 MathLib.finalizeNumber = function(n) {
 	// Отрезание лишних нулей в наивысших разрядах (например, если пользователь ввёл 001, сделать это 1).
-	for (i = n.d.length; i-- > 0; ) {
+	for (var i = n.d.length; i-- > 0; ) {
 		if (n.d[i] != 0) { // Если цифра в данном разряде не 0, то останавливаем цикл.
 			break;
 		}
@@ -28,7 +28,7 @@ MathLib.parse = function(str) {
 	var n = { d: [], s: 1 };
 
 	// Добавление чисел от наименьшего разряда к наибольшему.
-	for (i = str.length; i-- > 0; ) {
+	for (var i = str.length; i-- > 0; ) {
 		var code = str.charCodeAt(i);
 		if (code >= 48 && code <= 57) { // От 0 до 9.
 			n.d.push(code - 48);
@@ -57,7 +57,7 @@ MathLib.toString = function(n) {
 	}
 
 	// Добавление символов цифр в массив.
-	for (i = n.d.length; i-- > 0; ) {
+	for (var i = n.d.length; i-- > 0; ) {
 		str.push(String.fromCharCode(48 + n.d[i]));
 	}
 
