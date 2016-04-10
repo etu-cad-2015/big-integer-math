@@ -23,7 +23,7 @@ MathLib.finalizeNumber = function(n) {
 
 // Перевод строкового представления (числа, введённого пользователем) в число.
 // -- Кузьмин Виталий, 5302.
-MathLib.parse = function(str) {
+MathLib.parseNumber = function(str) {
 	// Создание объекта числа, изначально +0.
 	var n = { d: [], s: 1 };
 
@@ -42,7 +42,7 @@ MathLib.parse = function(str) {
 
 // Перевод числа в строковое представление, пригодное для показа пользователю.
 // -- Кузьмин Виталий, 5302.
-MathLib.toString = function(n) {
+MathLib.numberToString = function(n) {
 	// Если число 0, сразу вернём "0", иначе будет пустая строка.
 	if (n.d.length == 0) {
 		return "0";
