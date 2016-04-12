@@ -7,7 +7,7 @@ MathLib.sub_ndn_n = function(n1, d, n2) {
     n2 = MathLib.mul_nd_n(n2, f); // умножаем второй длинное число на цифру f
     n1 = MathLib.sub_nn_n(n1, n2); // вычитаем из первого длинного числа второе
   }
-  else { /* В случае если первое меньше второго мы ничего не делаем */ }
-  
+  else n1 = MathLib.sub_nn_n(n2, n1); // вычитыаем из второго длинного числа первое
+
   return MathLib.finalizeNumber(n1);
 }
