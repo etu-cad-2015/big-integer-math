@@ -17,9 +17,9 @@ function ADD_ZZ_Z(int A, int B){
     }
     else
       if (COM_NN_D(ABS_Z_N(B,A)==2)
-	return(MUL_Z-_Z(SUB_NN_N(ABS_Z_N(B[m]),A[n]);
+	return(MUL_Z-_Z(SUB_NN_N(ABS_Z_N(B),A);
       else
-  	return(SUB_NN_N(B[m],ABS_Z_N(A[n]))
+  	return(SUB_NN_N(B,ABS_Z_N(A))
 }
   
         
