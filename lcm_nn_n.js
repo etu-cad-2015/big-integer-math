@@ -2,13 +2,13 @@
 //Наименьшее общее кратное двух натуральных чисел
 //Входные данные: два натуральных числа
 //Выходные данные: одно натуральное число - НОК
-function LCM_NN_N(numb1, numb2)
+function lcm_nn_n(numb1, numb2)
 {
-  var LCM ={};
+  var lcm ={};
 
   //НОК = (numb1 * numb2) / НОД(numb1, numb2)
-  LCM.d = DIV_NN_N(MUL_NN_N(numb1, numb2), GCF_NN_N(numb1, numb2));
-  LCM.s = 1;
+  lcm.d = div_nn_n(mul_nn_n(numb1, numb2), gcf_nn_n(numb1, numb2));
+  lcm.s = 1;
 
-  return LCM;
+  return lcm;
 };
