@@ -1,14 +1,9 @@
-//Created by Konstantin Rakov (5302) on 10.04.2016.
-//Наименьшее общее кратное двух натуральных чисел
-//Входные данные: два натуральных числа
-//Выходные данные: одно натуральное число - НОК
-function lcm_nn_n(numb1, numb2)
+// Наименьшее общее кратное двух натуральных чисел.
+// Входные данные: два натуральных числа
+// Выходные данные: одно натуральное число - НОК.
+// -- Раков Константин, 5302.
+MathLib.lcm_nn_n = function(numb1, numb2)
 {
-  var lcm ={};
-
-  //НОК = (numb1 * numb2) / НОД(numb1, numb2)
-  lcm.d = div_nn_n(mul_nn_n(numb1, numb2), gcf_nn_n(numb1, numb2));
-  lcm.s = 1;
-
-  return lcm;
+	// НОК = (numb1 * numb2) / НОД(numb1, numb2)
+	return MathLib.div_nn_n(MathLib.mul_nn_n(numb1, numb2), MathLib.gcf_nn_n(numb1, numb2));
 };
