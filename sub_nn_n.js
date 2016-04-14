@@ -33,7 +33,7 @@ MathLib.SUB_NN_N = function(A, B) {
 	
 	var C = { d: [], s: 1 };
 	// сравниваем числа
-	switch (MathLib.COM_NN_D(A, B)) {
+	switch (MathLib.com_nn_d(A, B)) {
 	case 2:	
 		//A > B
 		C.d = dif(A.d, B.d);
