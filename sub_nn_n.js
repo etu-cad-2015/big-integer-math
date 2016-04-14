@@ -23,7 +23,7 @@ function SUB_NN_N(A, B) {
 		
 		var n = max.length, m = min.length,  res = [];
 		
-		//если мЕньшее число короче бОльшего, дописываем 0		
+		//если меньшее число короче большего, дописываем 0		
 		if (m < n) {
 			for (var i = m; i < n; i++)
 				min[i] = 0;
