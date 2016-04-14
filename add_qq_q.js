@@ -4,7 +4,7 @@ MathLib.add_qq_q = function (qqA, qqB)
 	// Автор Духовой Владимир гр 5301
 	var A, B;
 	A = MathLib.cloneNumber(qqA);
-	b = MathLib.cloneNumber(qqB);
+	B = MathLib.cloneNumber(qqB);
 	// Входные дроби имеет вид : A = a/b и B = c/d
 	// Результируящая дробь имеет вид e/f
 	// Числитель полученной дроби e = a*НОК(b,d)+b*НОК(b,d)
