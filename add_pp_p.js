@@ -11,12 +11,10 @@ MathLib.add_pp_p = function (polinom1, polinom2) {
 	  
 	  for (var i = 0; i < maxlength; ++i) {
 	        //Добавление нового элемента в массив коэффициентов полинома polinomsum 
-	        polinomsum.push ([ { d: [], s: 1 }, { d: [] } ]); 
+	        polinomsum.push ([ { d: [], s: 1 }, { d: [], s: 1 ]); 
 		//Вычисление i-ого коэффициента суммарного многочлена
 		polinomsum[i] = MathLib.add_qq_q (polinom1[i], polinom2[i]);
 	        }
 			
       return polinomsum;	
 }
-
-
