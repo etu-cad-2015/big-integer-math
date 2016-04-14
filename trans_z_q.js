@@ -10,7 +10,7 @@
 };
 var n = [];*/
 
-MathLib.TRANS_Z_Q= function(z, n)
+MathLib.trans_z_q = function(z, n)
 {
     var Q = { //Инициализация дроби, которая будет возвращаемым значением
         Z:[],//Целая часть
@@ -31,5 +31,5 @@ MathLib.TRANS_Z_Q= function(z, n)
     {
         Q.N[i] = n[i];//Заполнение массива знаминателя 
     }
-    return Q;
+    return Q;//Возвращение дроби
 }
