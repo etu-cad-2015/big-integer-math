@@ -47,6 +47,6 @@ MathLib.SUB_NN_N = function(A, B) {
 		C.d = [];
 		break;
 	};
-	return returnMathLib.finalizeNumber(C);
+	return MathLib.finalizeNumber(C);
 	
 }
