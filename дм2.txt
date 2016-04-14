@@ -1,8 +1,0 @@
-/*Кавунская Анастасия 5301
-   умножение дробей */
-function  mul_qq_q (qq1,qq2)
-{ var qq3=[];
-   qq3[0]=mul_zz_z(qq1[0],qq2[0]);
-   qq3[1]=mul_zz_z (qq1[1],qq2[1]);
-return  qq3;
-}
