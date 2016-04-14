@@ -2,9 +2,12 @@ MathLib.add_qq_q = function (qqA, qqB)
 {
 	// Сложение дробей
 	// Автор Духовой Владимир гр 5301
-	var A, B;
-	A = MathLib.cloneNumber(qqA);
-	B = MathLib.cloneNumber(qqB);
+	var A = []; 
+	var B = [];
+	A[0] = MathLib.cloneNumber(qqA[0]);
+	B[0] = MathLib.cloneNumber(qqB[0]);
+	A[1] = MathLib.cloneNumber(qqA[1]);
+	B[1] = MathLib.cloneNumber(qqB[1]);
 	// Входные дроби имеет вид : A = a/b и B = c/d
 	// Результируящая дробь имеет вид e/f
 	// Числитель полученной дроби e = a*НОК(b,d)+b*НОК(b,d)
