@@ -17,5 +17,5 @@ MathLib.div_nn_n = function(n1, n2){
         else quotient.d[ranks] = 0; // если n2 будет больше n1, то коэффициент 0
         ranks--;
     }
-    return MathLib.finalizeNumber(quotient);
+    return MathLib.finalizeNumber(quotient); // удаляем нули в старших разрядах и возвращаем результат
 }
