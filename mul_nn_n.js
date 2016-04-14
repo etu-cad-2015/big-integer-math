@@ -13,11 +13,8 @@ MathLib.mul_nn_n = function(n1, n2) {
     n3 = MathLib.add_nn_n( MathLib.mul_nk_n( MathLib.mul_nd_n( n1, n2.d[digit] ), digit ), n3 );
   }
 
-  /* Если одно из исходных чисел n1, n2 отрицательное,
-  результат также отрицательный. */
-  if ( (n1.s === -1) ^ (n2.s === -1) ) {
-    n3.s = -1;
-  }
+  /* Определение знака результата. */
+  n3.s = n1.s * n2.s;
 
   return MathLib.finalizeNumber(n3);
 }
