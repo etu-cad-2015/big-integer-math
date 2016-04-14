@@ -1,23 +1,6 @@
-function SUB_NN_N(A, B) {
+MathLib.SUB_NN_N = function(A, B) {
 //Вычитание из первого большего натурального числа второго меньшего или равного
 //Пешков Денис, гр. 5301	
-	var C = { d: [], s: 1 };
-	
-	switch (COM_NN_D(A, B)) {
-	case 2:	
-		//A > B
-		C.d = dif(A.d, B.d);
-		break;
-	case 1:
-		//A < B	
-		C.d = dif(B.d, A.d);
-		break;
-	case 0:
-		//A = B	
-		C.d = [];
-		break;
-	};
-	return C;
 	
 	function  dif(max, min) {
 		
@@ -47,4 +30,23 @@ function SUB_NN_N(A, B) {
 		res.splice(0,i);
 		return res
 	};
+	
+	var C = { d: [], s: 1 };
+	// сравниваем числа
+	switch (MathLib.COM_NN_D(A, B)) {
+	case 2:	
+		//A > B
+		C.d = dif(A.d, B.d);
+		break;
+	case 1:
+		//A < B	
+		C.d = dif(B.d, A.d);
+		break;
+	case 0:
+		//A = B	
+		C.d = [];
+		break;
+	};
+	return returnMathLib.finalizeNumber(C);
+	
 }
