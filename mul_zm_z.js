@@ -1,9 +1,9 @@
-/*	Боселов И.А. гр. 5301
-  	Модуль: Z-3 - MUL_ZM_Z
-	Умножение целого на (-1)
-*/
-function MUL_ZM_Z(A)
+// РЈРјРЅРѕР¶РµРЅРёРµ С†РµР»РѕРіРѕ РЅР° (-1).
+// -- Р‘РѕСЃРµР»РѕРІ Р.Рђ., 5301.
+
+MathLib.mul_zm_z = function(a)
 {
-	A.s=-A.s;    // изменение знака 
-return A;            // возвращение результата
-}
+	var a2 = MathLib.cloneNumber(a);
+	a2.s = -a2.s;
+	return MathLib.finalizeNumber(a2);
+};
