@@ -26,7 +26,7 @@ html, body {
 }
 
 .input {
-  margin: 10 auto;
+  margin: 10px auto;
   width: 90%;
   min-height: 270px;
   background: #555555;
