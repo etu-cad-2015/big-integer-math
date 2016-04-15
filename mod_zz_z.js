@@ -12,7 +12,7 @@ MathLib.mod_zz_z = function(zA, zB)
 	
 	if (A.s != B.s)     //Сравниваем их знаки
 		{
-		return MathLib.mul_z-_z(MathLib.sub_zz_z(A, MathLib.mul_zz_z(B, MathLib.div_zz_z(A, B)))); 	//Если не одинаковые,
+		return (B.d + MathLib.mul_z-_z(MathLib.sub_zz_z(A, MathLib.mul_zz_z(B, MathLib.div_zz_z(A, B)))); 	//Если не одинаковые,
 		                                                                            			//то возвращает значение умноженное на (-1)
 		}
 	else return MathLib.sub_zz_z(A, MathLib.mul_zz_z(B, MathLib.div_zz_z(A, B)));   	//Иначе, возвращает разность между A.d и B.d,
