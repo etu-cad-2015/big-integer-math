@@ -9,6 +9,7 @@
 * com_nn_d
 * deg_p_n
 * lcm_nn_n
+* led_p_q
 * mul_nd_n
 * mul_nn_n
 * mul_zm_z

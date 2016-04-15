@@ -1,10 +1,5 @@
-/*
-	Ковригин Владимир Константинович
-	Группа № 5302
-	Модуль P-5 Старший коэффицент многочлена
-*/  
-	Mathlib.led_p_q = function  (polynomial) {	
-	  
-	  return polynominal[ Mathlib.deg_p_n(polynominal)];
-	  
-	}	
+// Старший коэффицент многочлена.
+// -- Ковригин Владимир, 5302.
+MathLib.led_p_q = function(p) {
+	return MathLib.getPolynomCoefficient(MathLib.deg_p_n(p));
+}	

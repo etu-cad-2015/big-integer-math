@@ -6,6 +6,13 @@ var MathLib = {};
 // -- Модули должны использовать MathLib.cloneNumber, чтобы изменять поля существующих чисел.
 // - Многочлены, передаваемые в функции, наоборот - МОДИФИЦИРУЕМЫ. Функции для работы с ними в большинстве случаев не должны возвращать ничего.
 
+// Константы.
+// Используйте функции клонирования, если возможно, что вы будете что-то в них изменять.
+MathLib.ZERO = { d: [], s: 1 };
+MathLib.ONE = { d: [1], s: 1 };
+MathLib.ZERO_FRACTION = { p: MathLib.cloneNumber(MathLib.ZERO), q: MathLib.cloneNumber(MathLib.ONE) };
+MathLib.ONE_FRACTION = { p: MathLib.cloneNumber(MathLib.ONE), q: MathLib.cloneNumber(MathLib.ONE) };
+
 // Создаёт копию числа, чтобы не портить передаваемые в функции числа.
 MathLib.cloneNumber = function(n) {
 	return {
@@ -20,6 +27,16 @@ MathLib.cloneFraction = function(f) {
 		p: MathLib.cloneNumber(f.p),
 		q: MathLib.cloneNumber(f.q)
 	}
+};
+
+// Возвращает определённый коэффициент многочлена, даже если его нет.
+// Нельзя напрямую изменять это число.
+MathLib.getPolynomCoefficient = function(p, n) {
+	var c = p[n];
+	if (c == null) {
+		return MathLib.ZERO_FRACTION;
+	}
+	return c;
 };
 
 // Функция, которая следит за тем, чтобы внутреннее представление числа всегда оставалось корректным.
@@ -114,10 +131,3 @@ MathLib.numberToString = function(n) {
 
 	return str.join("");
 };
-
-// Константы.
-// Используйте функции клонирования, если возможно, что вы будете что-то в них изменять.
-MathLib.ZERO = { d: [], s: 1 };
-MathLib.ONE = { d: [1], s: 1 };
-MathLib.ZERO_FRACTION = { p: MathLib.cloneNumber(MathLib.ZERO), q: MathLib.cloneNumber(MathLib.ONE) };
-MathLib.ONE_FRACTION = { p: MathLib.cloneNumber(MathLib.ONE), q: MathLib.cloneNumber(MathLib.ONE) };
