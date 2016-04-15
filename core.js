@@ -14,6 +14,14 @@ MathLib.cloneNumber = function(n) {
 	};
 };
 
+// Создаёт копию рационального числа.
+MathLib.cloneFraction = function(f) {
+	return {
+		p: MathLib.cloneNumber(f.p),
+		q: MathLib.cloneNumber(f.q)
+	}
+};
+
 // Функция, которая следит за тем, чтобы внутреннее представление числа всегда оставалось корректным.
 // Каждый модуль, работающий непосредственно с цифрами, ОБЯЗАН вызвать эту функцию перед возвратом числа.
 // -- Кузьмин Виталий, 5302.
@@ -91,3 +99,10 @@ MathLib.numberToString = function(n) {
 
 	return str.join("");
 };
+
+// Константы.
+// Используйте функции клонирования, если возможно, что вы будете что-то в них изменять.
+MathLib.ZERO = { d: [], s: 1 };
+MathLib.ONE = { d: [1], s: 1 };
+MathLib.ZERO_FRACTION = { p: MathLib.cloneNumber(MathLib.ZERO), q: MathLib.cloneNumber(MathLib.ONE) };
+MathLib.ONE_FRACTION = { p: MathLib.cloneNumber(MathLib.ONE), q: MathLib.cloneNumber(MathLib.ONE) };
