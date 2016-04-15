@@ -1,7 +1,7 @@
 MathLib.sub_nn_n = function(A, B) {
 //Вычитание из первого большего натурального числа второго меньшего или равного
 //Пешков Денис, гр. 5301	
-	
+
 	function  dif(max, min) {
 		
 		var n = max.length, m = min.length,  res = [];
@@ -31,16 +31,16 @@ MathLib.sub_nn_n = function(A, B) {
 		return res
 	};
 	
-	var C = { d: [], s: 1 };
+	var C = { d: [], s: 1 }, n1 = MathLib.cloneNumber(A), n2 = MathLib.cloneNumber(B);
 	// сравниваем числа
-	switch (MathLib.com_nn_d(A, B)) {
+	switch (MathLib.com_nn_d(n1, n2)) {
 	case 2:	
 		//A > B
-		C.d = dif(A.d, B.d);
+		C.d = dif(n1.d, n2.d);
 		break;
 	case 1:
 		//A < B	
-		C.d = dif(B.d, A.d);
+		C.d = dif(n2.d, n1.d);
 		break;
 	case 0:
 		//A = B	
