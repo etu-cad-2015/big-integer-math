@@ -59,6 +59,33 @@ html, body {
   text-align: left;
 }
 
+.hide {
+  display: none;
+}
+
+.hide + label ~ div {
+  display: none;
+}
+
+.hide:checked + label {
+  color: #E64C00;
+  text-shadow: 0 0 10px;
+}
+
+.hide:checked + label + div {
+ display: block;
+} 
+
+.hide:checked .input-type-list {
+  display: none;
+}
+
+.input-field {
+  border: solid 1px black;
+  margin-bottom: 5px;
+}
+
+
 .query-submit {
 }
 

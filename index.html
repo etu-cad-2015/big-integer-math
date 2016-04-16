@@ -19,75 +19,113 @@
         с которыми работают модули -->
         <div class='input-type-wrapper'>
           <span class='input-type'>Натуральные числа</span> <br>
-          <ul>
+          <ul class='input-type-list'>
 
 
             <!-- Пустой шаблон для добавления модулей
               <li class='input-type-list'>
-              <a class='input-type-link' href=""> </a> 
+              <span class='input-type-link' > </span> 
               </li>
 
             -->
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Сравнение натуральных чисел</a> 
+            <li>
+
+              <input type='checkbox' id='hd-1' class='hide'/>
+
+              <label for='hd-1' class='input-type-link'>Сравнение 
+                натуральных чисел</label> 
+              <div> 
+                <form onInput='document.getElementById("result").innerHTML = 
+                  parseFloat(document.getElementById("a").value) + 
+                  parseFloat(document.getElementById("b").value);'>
+                  <input id="a" class='input-field' type='text' 
+                         placeholder='Введите первое число'/>
+                  <input id="b" class='input-field' type='text' 
+                         placeholder='Введите второе число'/>
+                </form>
+                Ответ: 
+                <span id='result'></span>
+                <script type='text/javascript'>
+                </script>
+              </div>
+
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Проверка на ноль</a>
+            <li>
+              <input type='checkbox' id='hd-2' class='hide'/>
+
+              <label for='hd-2' class='input-type-link'>Проверка на ноль</label> 
+              <div> 
+                <form id="form" onInput='document.getElementById("nullcheck-result").innerHTML = 
+                  parseFloat(document.getElementById("nullcheck-a").value) + 
+                  parseFloat(document.getElementById("nullcheck-b").value);'>
+                  <input id="nullcheck-a" class='input-field' type='text' 
+                         placeholder='Введите первое число'/>
+                  <input id="nullcheck-b" class='input-field' type='text' 
+                         placeholder='Введите второе число'/>
+                </form>
+                Ответ: 
+                <span id='nullcheck-result'></span>
+                <script type='text/javascript'>
+                  console.log(document.getElementById("form"));
+                </script>
+              </div>
+
+
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Добавление 1 к натуральному числу</a> 
+            <li>
+              <a class='input-type-link' >Добавление 1 к натуральному числу</a> 
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Сложение натуральных чисел</a> 
+            <li>
+              <a class='input-type-link' >Сложение натуральных чисел</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычитание из первого большего 
-               натурального числа второго меньшего или равного</a> 
+            <li>
+              <a class='input-type-link' >Вычитание из первого большего 
+                натурального числа второго меньшего или равного</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение натурального числа на цифру</a> 
+            <li>
+              <a class='input-type-link' >Умножение натурального числа на цифру</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение натурального числа на 10^k</a> 
+            <li>
+              <a class='input-type-link' >Умножение натурального числа на 10^k</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение натуральных чисел</a> 
+            <li>
+              <a class='input-type-link' >Умножение натуральных чисел</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычитание из натурального другого 
-              натурального, умноженного на цифру для случая с неотрицательным 
-              результатом </a> 
+            <li>
+              <a class='input-type-link' >Вычитание из натурального другого 
+                натурального, умноженного на цифру для случая с неотрицательным 
+                результатом </a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычисление первой цифры деления большего
-              числе на меньшее, доможенную на 10^k, где k -- номер позиции этой цифры</a> 
+            <li>
+              <a class='input-type-link' >Вычисление первой цифры деления большего
+                числе на меньшее, доможенную на 10^k, где k -- номер позиции этой цифры</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Частное от деления большего натурального 
-              числ на меньшее с остатком</a> 
+            <li>
+              <a class='input-type-link' >Частное от деления большего натурального 
+                числ на меньшее с остатком</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Остаток от деления большего натурального
-             числа на меньшее </a> 
+            <li>
+              <a class='input-type-link' >Остаток от деления большего натурального
+                числа на меньшее </a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">НОД натуральных чисел</a> 
+            <li>
+              <a class='input-type-link' >НОД натуральных чисел</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">НОК натуральных чисел</a> 
+            <li>
+              <a class='input-type-link' >НОК натуральных чисел</a> 
             </li>
 
 
@@ -95,63 +133,63 @@
         </div>
         <div class='input-type-wrapper'>
           <span class='input-type'>Многочлены</span> <br> 
-          <ul>
+          <ul class='input-type-list'>
 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Сложение многочленов</a>
+            <li>
+              <a class='input-type-link' >Сложение многочленов</a>
             </li> 
 
-             <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычитание многочленов</a>
+            <li>
+              <a class='input-type-link' >Вычитание многочленов</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение на рациональное число</a> 
+            <li>
+              <a class='input-type-link' >Умножение на рациональное число</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение многочлена на x^k</a> 
+            <li>
+              <a class='input-type-link' >Умножение многочлена на x^k</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Старший коэффициент многочлена</a> 
+            <li>
+              <a class='input-type-link' >Старший коэффициент многочлена</a> 
             </li>
 
-             <li class='input-type-list'>
-              <a class='input-type-link' href="">Степень многочлена</a>
+            <li>
+              <a class='input-type-link' >Степень многочлена</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вынесение из многочлена НОК 
+            <li>
+              <a class='input-type-link' >Вынесение из многочлена НОК 
                 знаменателей коэффициентов и НОД числителей </a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение многочленов</a> 
+            <li>
+              <a class='input-type-link' >Умножение многочленов</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Частное от деления многочлена на
-              многочлен при делении с остатком</a> 
+            <li>
+              <a class='input-type-link' >Частное от деления многочлена на
+                многочлен при делении с остатком</a> 
             </li>
 
-             <li class='input-type-list'>
-              <a class='input-type-link' href="">Осток от деления многочлена 
-              на многочлен</a>
+            <li>
+              <a class='input-type-link' >Осток от деления многочлена 
+                на многочлен</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">НОД многочленов</a> 
+            <li>
+              <a class='input-type-link' >НОД многочленов</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Производная многочлена</a> 
+            <li>
+              <a class='input-type-link' >Производная многочлена</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Преобразование многочлена: кратные
-              корни в простые</a> 
+            <li>
+              <a class='input-type-link' >Преобразование многочлена: кратные
+                корни в простые</a> 
             </li>
 
 
@@ -159,49 +197,49 @@
         </div>
         <div class='input-type-wrapper'>
           <span class='input-type'>Целые числа</span> <br>
-          <ul>
+          <ul class='input-type-list'>
 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Абослютная величина числа</a>
+            <li>
+              <a class='input-type-link' >Абослютная величина числа</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Определение положительности числа </a> 
+            <li>
+              <a class='input-type-link' >Определение положительности числа </a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение целого на -1</a> 
+            <li>
+              <a class='input-type-link' >Умножение целого на -1</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Преобразование натурального в целое</a> 
+            <li>
+              <a class='input-type-link' >Преобразование натурального в целое</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Преобразование целого неотрицательного
-              в натуральное</a> 
+            <li>
+              <a class='input-type-link' >Преобразование целого неотрицательного
+                в натуральное</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Сложение целых чисел</a> 
+            <li>
+              <a class='input-type-link' >Сложение целых чисел</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычитание целых чисел</a> 
+            <li>
+              <a class='input-type-link' >Вычитание целых чисел</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение целых чисел</a> 
+            <li>
+              <a class='input-type-link' >Умножение целых чисел</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Частное от деления большего 
+            <li>
+              <a class='input-type-link' >Частное от деления большего 
                 целого числа на меньшее или равное натуральное с остатком</a> 
             </li>
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Остаток от деления большего
+            <li>
+              <a class='input-type-link' >Остаток от деления большего
                 целого числа на меньшее или равное</a> 
             </li>
 
@@ -211,40 +249,40 @@
 
         <div class='input-type-wrapper'>
           <span class='input-type'>Рациональные числа</span><br>
-          <ul>
+          <ul class='input-type-list'>
 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Сокращение дроби</a>
+            <li>
+              <a class='input-type-link' >Сокращение дроби</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Проверка, является ли число целым</a>
+            <li>
+              <a class='input-type-link' >Проверка, является ли число целым</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Преобразование целого в дробное</a>
+            <li>
+              <a class='input-type-link' >Преобразование целого в дробное</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Преобразование дробного в целое
-              (при знаменателе равном 1)</a>
+            <li>
+              <a class='input-type-link' >Преобразование дробного в целое
+                (при знаменателе равном 1)</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Сложение дробей</a>
+            <li>
+              <a class='input-type-link' >Сложение дробей</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычитание дробей</a>
+            <li>
+              <a class='input-type-link' >Вычитание дробей</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Вычитание дробей</a>
+            <li>
+              <a class='input-type-link' >Вычитание дробей</a>
             </li> 
 
-            <li class='input-type-list'>
-              <a class='input-type-link' href="">Умножение дробей</a>
+            <li>
+              <a class='input-type-link' >Умножение дробей</a>
             </li> 
 
 
