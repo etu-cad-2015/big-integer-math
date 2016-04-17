@@ -57,8 +57,8 @@
               <label for='hd-2' class='input-type-link'>Проверка на ноль</label> 
               <div> 
                 <form id="form" onInput='document.getElementById("nullcheck-result").innerHTML = 
-                  parseFloat(document.getElementById("nullcheck-a").value) + 
-                  parseFloat(document.getElementById("nullcheck-b").value);'>
+                      parseFloat(document.getElementById("nullcheck-a").value) + 
+                      parseFloat(document.getElementById("nullcheck-b").value);'>
                   <input id="nullcheck-a" class='input-field' type='text' 
                          placeholder='Введите первое число'/>
                   <input id="nullcheck-b" class='input-field' type='text' 
@@ -67,7 +67,7 @@
                 Ответ: 
                 <span id='nullcheck-result'></span>
                 <script type='text/javascript'>
-                  console.log(document.getElementById("form"));
+console.log(document.getElementById("form"));
                 </script>
               </div>
 
@@ -137,7 +137,28 @@
 
 
             <li>
-              <a class='input-type-link' >Сложение многочленов</a>
+
+              <input type='checkbox' id='hd-3' class='hide'/>
+
+              <label for='hd-3' class='input-type-link'>Сложение многочленов</label> 
+              <div> 
+                <form id="form" onInput='document.getElementById("nullcheck-result").innerHTML = 
+                      parseFloat(document.getElementById("nullcheck-a").value) + 
+                      parseFloat(document.getElementById("nullcheck-b").value);'>
+                  <input id="nullcheck-a" class='input-field' type='text' 
+                         placeholder='Введите первое число'/>
+                  <input id="nullcheck-b" class='input-field' type='text' 
+                         placeholder='Введите второе число'/>
+                </form>
+                Ответ: 
+                <span id='nullcheck-result'></span>
+                <script type='text/javascript'>
+console.log(document.getElementById("form"));
+                </script>
+              </div>
+
+
+
             </li> 
 
             <li>
