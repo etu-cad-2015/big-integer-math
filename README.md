@@ -17,3 +17,6 @@
 * poz_z_d
 * trans_q_z
 * trans_z_q
+
+Интегрированные модули:
+* add_nn_n
