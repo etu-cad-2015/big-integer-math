@@ -3,7 +3,7 @@
 
 MathLib.trans_z_q = function(p) {
 	return MathLib.finalizeFraction({
-			p: MathLib.cloneNumber(p),
-			q: { d: [1], s: 1 }
-		});
+		p: MathLib.cloneNumber(p),
+		q: { d: [1], s: 1 }
+	});
 };
