@@ -15,6 +15,7 @@
 * mul_zm_z
 * nzer_n_b
 * poz_z_d
+* red_q_q
 * trans_q_z
 * trans_z_q
 
