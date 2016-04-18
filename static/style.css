@@ -85,8 +85,8 @@ html, body {
   margin-bottom: 5px;
 }
 
-
-.query-submit {
+.result {
+  word-wrap: break-word;
 }
 
 .page-wrap:after {
