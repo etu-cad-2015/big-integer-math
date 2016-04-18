@@ -7,26 +7,12 @@ var MathLib = {};
 // - Многочлены, передаваемые в функции, наоборот - МОДИФИЦИРУЕМЫ. Функции для работы с ними в большинстве случаев не должны возвращать ничего.
 
 // Создаёт копию числа, чтобы не портить передаваемые в функции числа.
-//
-// ##########
-// Change Log
-// ##########
-//
-// Pipftarrd, 17.05.16 14:15:
-// Помещено здесь, чтобы получилось объявление констант (она там используется) 
 MathLib.cloneNumber = function(n) {
 	return {
 		d: n.d.slice(),
 		s: n.s
 	};
 };
-
-// Константы.
-// Используйте функции клонирования, если возможно, что вы будете что-то в них изменять.
-MathLib.ZERO = { d: [], s: 1 };
-MathLib.ONE = { d: [1], s: 1 };
-MathLib.ZERO_FRACTION = { p: MathLib.cloneNumber(MathLib.ZERO), q: MathLib.cloneNumber(MathLib.ONE) };
-MathLib.ONE_FRACTION = { p: MathLib.cloneNumber(MathLib.ONE), q: MathLib.cloneNumber(MathLib.ONE) };
 
 // Создаёт копию рационального числа.
 MathLib.cloneFraction = function(f) {
@@ -35,6 +21,13 @@ MathLib.cloneFraction = function(f) {
 		q: MathLib.cloneNumber(f.q)
 	}
 };
+
+// Константы.
+// Используйте функции клонирования, если возможно, что вы будете что-то в них изменять.
+MathLib.ZERO = { d: [], s: 1 };
+MathLib.ONE = { d: [1], s: 1 };
+MathLib.ZERO_FRACTION = { p: MathLib.cloneNumber(MathLib.ZERO), q: MathLib.cloneNumber(MathLib.ONE) };
+MathLib.ONE_FRACTION = { p: MathLib.cloneNumber(MathLib.ONE), q: MathLib.cloneNumber(MathLib.ONE) };
 
 // Возвращает определённый коэффициент многочлена, даже если его нет.
 // Нельзя напрямую изменять это число.
