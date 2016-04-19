@@ -68,10 +68,52 @@ function add_nn_n_handle() {
               -->
               <li>
 
-                <input type="checkbox" id="hd-1" class="hide"/>
+                <input type="checkbox" id="com-nn-d" class="hide"/>
 
-                <label for="hd-1" class="input-type-link">Сравнение 
-                  натуральных чисел</label> 
+                <label for="com-nn-d" class="input-type-link">
+                  Сравнение натуральных чисел
+                </label> 
+
+              <div> 
+              <form onInput="com_nn_d_handle();">
+
+              <input id="com-nn-d-n1" class="input-field" type="text" 
+              placeholder="Введите первое число"/>
+              <input id="com-nn-d-n2" class="input-field" type="text" 
+              placeholder="Введите второе число"/>
+              </form>
+              Ответ: 
+              <span id="com-nn-d-result" class="result"></span>
+
+              <script type="text/javascript">
+function com_nn_d_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "com-nn-d-n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "com-nn-d-n2").value);
+  var result = MathLib.com_nn_d(number1, number2);
+
+  switch ( result ) {
+    case 0:
+      document.getElementById("com-nn-d-result").innerHTML = "они равны.";
+      break;
+    
+    case 1:
+      document.getElementById("com-nn-d-result").innerHTML = "первое меньше.";
+      break;
+    
+    case 2:
+      document.getElementById("com-nn-d-result").innerHTML = "второе меньше.";
+      break;
+
+  }
+
+}
+
+              </script>
+
+              </div>
+
 
               </li> 
 
@@ -405,6 +447,7 @@ function abs_z_n_handle() {
   <script src="add_nn_n.js" type="text/javascript"></script>
   <script src="add_1n_n.js" type="text/javascript"></script>
   <script src="trans_z_n.js" type="text/javascript"></script>
+  <script src="com_nn_d.js" type="text/javascript"></script>
   <script src="" type="text/javascript"></script>
 
   <script type="text/javascript">

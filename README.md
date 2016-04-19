@@ -24,3 +24,4 @@
 * add_nn_n
 * add_1n_n
 * abs_z_n == trans_z_n
+* com_nn_d
