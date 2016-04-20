@@ -13,7 +13,10 @@ MathLib.div_nn_dk = function(A, B){
 	}
 	
 	//2. Если А1 меньше чем B, то прибавляем в него еще одну цифру из А.
-	if (MathLib.com_nn_d(A1, B) == 1) {
+  var A1num = {};
+  A1num.d = A1;
+  A1num.s = 1;
+	if (MathLib.com_nn_d(A1num, B) == 1) {
 		for (var i = m; i > 0; i--)
 			A1[i] = A1[i-1];	
 		A1[0] = A[0];	
@@ -22,11 +25,14 @@ MathLib.div_nn_dk = function(A, B){
 	//3. Перебором всех цифр c находим самую большую, при которой произведение c*B <= A1
 	for (var c = 9; c > 0; c--) {
 		B1 = MathLib.mul_nd_n(B, c);	
-		var dif = MathLib.com_nn_d(B1, A1);
+
+    A1num.d = A1;
+    A1num.s = 1;
+		var dif = MathLib.com_nn_d(B1, A1num);
 		if (dif == 1 || dif == 0)
 			break;
 	}
 	//Записываем цифру c в результат
 	var res = c;
-	return MathLib.finalizeNumber(res);
+	return res;
 }

@@ -4,7 +4,7 @@
 MathLib.sub_ndn_n = function(n1, d, n2) {
 
   if( MathLib.com_nn_d(n1, n2) != 1 ) { // n1 >= n2
-    n2 = MathLib.mul_nd_n(n2, f); // умножаем второе длинное число на цифру f
+    n2 = MathLib.mul_nd_n(n2, d); // умножаем второе длинное число на цифру f
     n1 = MathLib.sub_nn_n(n1, n2); // вычитаем из первого длинного числа второе
   }
   else n1 = MathLib.sub_nn_n(n2, n1); // вычитыаем из второго длинного числа первое

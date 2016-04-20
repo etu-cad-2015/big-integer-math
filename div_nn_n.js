@@ -5,19 +5,26 @@
 MathLib.div_nn_n = function(n1, n2){
     var quotient = {d: [], s: 1}; // частное
     var ranks = n1.d.length - n2.d.length; // максимально возможная длина частного (в длине неучитывается нулевой элемент)
-
-    var clone_n1 = cloneNumber(n1); // копируем для изменения
+    
+    // копируем для изменения
+    var clone_n1 = MathLib.cloneNumber(n1); 
 
     while (ranks >= 0) // проходим все ранги частного от старшего разряда к нулевому
     {
-        var ranks_n2 = mul_nk_n(ranks, n2); // делаю ранг n2 таким же как у clone_n1
-        if(com_nn_d(clone_n1, ranks_n2) != 1) // если clone_n1 получится больше, то находим нужный коэффициент и вычитаем n2 * коэффициент из n1
+        console.log("div_nn_n: ");
+        console.log(n2, ranks);
+        var ranks_n2 = MathLib.mul_nk_n(n2, ranks); // делаю ранг n2 таким же как у clone_n1
+          
+        // если clone_n1 получится больше, 
+        // то находим нужный коэффициент и вычитаем n2 * коэффициент из n1
+        if (MathLib.com_nn_d(clone_n1, ranks_n2) != 1) 
         {
-            quotient.d[ranks] = div_nn_dk(clone_n1, n2); // находим коэффициент
-            clone_n1 = sub_ndn_n(clone_n1, quotient.d[ranks], n2); // вычитаем
+            quotient.d[ranks] = MathLib.div_nn_dk(clone_n1, n2); // находим коэффициент
+            clone_n1 = MathLib.sub_ndn_n(clone_n1, quotient.d[ranks], n2); // вычитаем
         }
         else quotient.d[ranks] = 0; // если n2 будет больше clone_n1, то коэффициент 0
         ranks--;
     }
-    return MathLib.finalizeNumber(quotient); // удаляем нули в старших разрядах и возвращаем результат
+    return MathLib.finalizeNumber(quotient); 
+    // удаляем нули в старших разрядах и возвращаем результат
 }
