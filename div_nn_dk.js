@@ -9,9 +9,8 @@ MathLib.div_nn_dk = function(A, B){
 	
 	//1. Выбираем из A слева столько цифр, сколько их в B. Получаем число A1
 	for (var i = 0; i < m; i++) { 
-		A1[i] = A.d[n-m+i+1];
+		A1[i] = A.d[n-m+i];
 	}
-	var j = n-m+i+1;
 	//2. Если А1 меньше чем B, то прибавляем в него еще одну цифру из А.
   var A1num = {};
   A1num.d = A1;
@@ -19,9 +18,8 @@ MathLib.div_nn_dk = function(A, B){
 	if (MathLib.com_nn_d(A1num, B) == 1) {
 		for (var i = m; i > 0; i--)
 			A1[i] = A1[i-1];	
-		A1[0] = A.d[j];//!!!!	
+		A1[0] = A.d[n-m-1];//!!!!	
 	}
-
 	//3. Перебором всех цифр c находим самую большую, при которой произведение c*B <= A1
 	for (var c = 9; c > 0; c--) {
 		B1 = MathLib.mul_nd_n(B, c);	

@@ -424,7 +424,7 @@ function sub_ndn_n_handle() {
 
               <label for="div_nn_dk" class="input-type-link">
               Вычисление первой цифры деления большего
-                  числе на меньшее, доможенную на 10<sup>k</sup>, где k -- номер 
+                  числе на меньшее, домноженное на 10<sup>k</sup>, где k - номер 
                   позиции этой цифры
               </label> 
 
@@ -459,8 +459,43 @@ function div_nn_dk_handle() {
               </li>
 
               <li>
-                <a class="input-type-link" >Частное от деления большего натурального 
-                  числ на меньшее с остатком</a> 
+
+              <input type="checkbox" id="div_nn_n" class="hide"/>
+
+              <label for="div_nn_n" class="input-type-link">
+              Частное от деления большего натурального 
+                  числа на меньшее с остатком
+              </label> 
+
+              <div> 
+              <form onInput="div_nn_n_handle();">
+
+              <input id="div_nn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="div_nn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="div_nn_n_result" class="result"></span>
+
+              <script type="text/javascript">
+function div_nn_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "div_nn_n_n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "div_nn_n_n2").value);
+  var result = MathLib.div_nn_n(number1, number2);
+  document.getElementById("div_nn_n_result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
+
+             
               </li>
 
               <li>
