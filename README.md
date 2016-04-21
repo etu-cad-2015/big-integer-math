@@ -31,4 +31,5 @@
 * com_nn_d
 * nzer_n_b
 * sub_nn_n
-* mul_nd_n
+* mul_nd_n // TO-DO: проверка на цифру (хуйня, если второе - не цифра)
+* mul_nk_n

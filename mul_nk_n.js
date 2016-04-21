@@ -10,9 +10,9 @@ MathLib.mul_nk_n = function(number, k) {
   var c = {};
   c.d = [];
   console.log (number);
-  for (var i = number.d.length; i >= 0; i--) {
-    c.d[i + k] = number.d[i];
-  }
+  for (var i = number.d.length - 1; i >= 0; i--) { 
+  c.d[i+k] = number.d[i]; 
+ }
   
   for (var i = k - 1; i >= 0; i--) {
     c.d[i] = 0;
