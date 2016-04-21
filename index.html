@@ -117,10 +117,40 @@ function com_nn_d_handle() {
               </li> 
 
               <li>
-                <input type="checkbox" id="hd-2" class="hide"/>
+                <input type="checkbox" id="nzer-n-b" class="hide"/>
 
-                <label for="hd-2" class="input-type-link">Проверка на ноль</label> 
+                <label for="nzer-n-b" class="input-type-link">Проверка на ноль</label> 
 
+		 <div>
+                  <form onInput="nzer_n_b_handle();">
+
+                    <input id="nzer-n-b-n" class="input-field" type="text" 
+                           placeholder="Введите число"/>
+                  </form>
+                  Ответ: 
+                  <span id="nzer-n-b-result" class="result"></span>
+            <script type="text/javascript">
+function nzer_n_b_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "nzer-n-b-n").value);
+
+  var result = MathLib.nzer_n_b(number1);
+  switch ( result ) {
+    case false:
+      document.getElementById("nzer-n-b-result").innerHTML = "число ноль.";
+      break;
+
+    case true:
+      document.getElementById("nzer-n-b-result").innerHTML = "число не ноль.";
+      break;
+  }
+
+}
+
+                  </script>
+		  
+		  </div>
+                  
               </li> 
 
               <li>
