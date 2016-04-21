@@ -5,13 +5,13 @@ MathLib.div_nn_dk = function(A, B){
 //Пешков Максим, гр. 5301	
 */	
 	var A1 = [], B1 = [];
-	var n = A.length, m = B.length;
+	var n = A.d.length, m = B.d.length;
 	
 	//1. Выбираем из A слева столько цифр, сколько их в B. Получаем число A1
 	for (var i = 0; i < m; i++) { 
-		A1[i] = A[n-m+i];
+		A1[i] = A.d[n-i-1];
 	}
-	
+	var j = n-i-1;
 	//2. Если А1 меньше чем B, то прибавляем в него еще одну цифру из А.
   var A1num = {};
   A1num.d = A1;
@@ -19,7 +19,7 @@ MathLib.div_nn_dk = function(A, B){
 	if (MathLib.com_nn_d(A1num, B) == 1) {
 		for (var i = m; i > 0; i--)
 			A1[i] = A1[i-1];	
-		A1[0] = A[0];	
+		A1[0] = A.d[j];//!!!!	
 	}
 
 	//3. Перебором всех цифр c находим самую большую, при которой произведение c*B <= A1

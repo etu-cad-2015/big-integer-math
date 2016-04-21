@@ -35,3 +35,4 @@
 * mul_nk_n
 * mul_nn_n
 * sub_ndn_n
+* div_nn_dk

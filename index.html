@@ -419,9 +419,43 @@ function sub_ndn_n_handle() {
               </li>
 
               <li>
-                <a class="input-type-link" >Вычисление первой цифры деления большего
+        	 
+              <input type="checkbox" id="div_nn_dk" class="hide"/>
+
+              <label for="div_nn_dk" class="input-type-link">
+              Вычисление первой цифры деления большего
                   числе на меньшее, доможенную на 10<sup>k</sup>, где k -- номер 
-                  позиции этой цифры</a> 
+                  позиции этой цифры
+              </label> 
+
+              <div> 
+              <form onInput="div_nn_dk_handle();">
+
+              <input id="div-nn-dk-n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="div-nn-dk-n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="div-nn-dk-result" class="result"></span>
+
+              <script type="text/javascript">
+function div_nn_dk_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "div-nn-dk-n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+"div-nn-dk-n2").value);
+
+  var result = MathLib.div_nn_dk(number1, number2);
+  document.getElementById("div-nn-dk-result").innerHTML = 
+    result;
+
+}
+
+              </script>
+
+              </div>
+
               </li>
 
               <li>
