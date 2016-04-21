@@ -223,12 +223,78 @@ function add_nn_n_handle() {
               </li>
 
               <li>
-                <a class="input-type-link" >Вычитание из первого большего 
-                  натурального числа второго меньшего или равного</a> 
+               
+		 <input type="checkbox" id="sub-nn-n" class="hide"/>
+
+              <label for="sub-nn-n" class="input-type-link">
+              Вычитание из первого большего натурального числа второго меньшего или равного
+              </label> 
+
+              <div> 
+              <form onInput="sub_nn_n_handle();">
+
+              <input id="sub-nn-n-n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="sub-nn-n-n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="sub-nn-n-result" class="result"></span>
+
+              <script type="text/javascript">
+		function sub_nn_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "sub-nn-n-n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "sub-nn-n-n2").value);
+  var result = MathLib.sub_nn_n(number1, number2);
+  document.getElementById("sub-nn-n-result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
               </li>
 
               <li>
-                <a class="input-type-link" >Умножение натурального числа на цифру</a> 
+               <input type="checkbox" id="mul-nd-n" class="hide"/>
+
+              <label for="mul-nd-n" class="input-type-link">
+              Умножение натурального числа на цифру
+              </label> 
+
+              <div> 
+              <form onInput="mul_nd_n_handle();">
+
+              <input id="mul-nd-n-n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              <input id="mul-nd-n-n2" class="input-field" type="text" 
+                     placeholder="Цифра"/>
+              </form>
+              Ответ: 
+              <span id="mul-nd-n-result" class="result"></span>
+
+              <script type="text/javascript">
+function mul_nd_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "mul-nd-n-n1").value);
+  var number2 = document.getElementById(
+        "mul-nd-n-n2").value;
+  var result = MathLib.mul_nd_n(number1, number2);
+  document.getElementById("mul-nd-n-result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
+
+            
               </li>
 
               <li>

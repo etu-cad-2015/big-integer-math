@@ -30,3 +30,5 @@
 * abs_z_n == trans_z_n
 * com_nn_d
 * nzer_n_b
+* sub_nn_n
+* mul_nd_n

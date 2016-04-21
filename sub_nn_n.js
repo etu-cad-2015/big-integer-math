@@ -24,10 +24,10 @@ MathLib.sub_nn_n = function(A, B) {
 		}
 
 		// удаляем ведущие нули
-		i=0;
+/*		i=0;
 		while (res[i] == 0) i++;
 		
-		res.splice(0,i);
+		res.splice(0,i);*/
 		return res
 	};
 	
