@@ -281,8 +281,8 @@ function add_nn_n_handle() {
 function mul_nd_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul-nd-n-n1").value);
-  var number2 = document.getElementById(
-        "mul-nd-n-n2").value;
+  var number2 = Number(document.getElementById(
+        "mul-nd-n-n2").value);
   var result = MathLib.mul_nd_n(number1, number2);
   document.getElementById("mul-nd-n-result").innerHTML = 
     MathLib.numberToString(result);
@@ -321,8 +321,8 @@ function mul_nd_n_handle() {
 function mul_nk_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul-nk-n-n1").value);
-  var number2 = document.getElementById(
-"mul-nk-n-k").value;
+  var number2 = Number(document.getElementById(
+"mul-nk-n-k").value);
 var result = MathLib.mul_nk_n(number1, number2);
   document.getElementById("mul-nk-n-result").innerHTML = 
 MathLib.numberToString(result);
@@ -335,13 +335,87 @@ MathLib.numberToString(result);
               </li>
 
               <li>
-                <a class="input-type-link" >Умножение натуральных чисел</a> 
+                
+
+              <input type="checkbox" id="mul_nn_n" class="hide"/>
+
+              <label for="mul_nn_n" class="input-type-link">
+              Умножение натуральных чисел
+              </label> 
+
+              <div> 
+              <form onInput="mul_nn_n_handle();">
+
+              <input id="mul-nn-n-n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mul-nn-n-n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mul-nn-n-result" class="result"></span>
+
+              <script type="text/javascript">
+		function mul_nn_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "mul-nn-n-n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "mul-nn-n-n2").value);
+  var result = MathLib.mul_nn_n(number1, number2);
+  document.getElementById("mul-nn-n-result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
+
+             
               </li>
 
               <li>
-                <a class="input-type-link" >Вычитание из натурального другого 
+              <input type="checkbox" id="sub_ndn_n" class="hide"/>
+
+              <label for="sub_ndn_n" class="input-type-link">
+              Вычитание из натурального другого 
                   натурального, умноженного на цифру для случая с неотрицательным 
-                  результатом </a> 
+                  результатом
+              </label> 
+
+              <div> 
+              <form onInput="sub_ndn_n_handle();">
+
+              <input id="sub_ndn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="sub_ndn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+	       <input id="sub_ndn_n_k" class="input-field" type="text" 
+                     placeholder="k"/>
+              </form>
+              Ответ: 
+              <span id="sub_ndn_n_result" class="result"></span>
+
+              <script type="text/javascript">
+function sub_ndn_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "sub_ndn_n_n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+"sub_ndn_n_n2").value);
+  var k = Number(document.getElementById(
+        "sub_ndn_n_k").value);
+  var result = MathLib.sub_ndn_n(number1, k, number2);
+  document.getElementById("sub_ndn_n_result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
+
+             
               </li>
 
               <li>
