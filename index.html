@@ -485,7 +485,7 @@ function div_nn_n_handle() {
   var number2 = MathLib.parseNumber(document.getElementById(
         "div_nn_n_n2").value);
   var result = MathLib.div_nn_n(number1, number2);
-  document.getElementById("div_nn_n_result").innerHTML = 
+  document.getElementById("div_nn_n").innerHTML = 
     MathLib.numberToString(result);
 
 }
@@ -499,12 +499,82 @@ function div_nn_n_handle() {
               </li>
 
               <li>
-                <a class="input-type-link" >Остаток от деления большего натурального
-                  числа на меньшее </a> 
+
+              <input type="checkbox" id="mod_nn_n" class="hide"/>
+
+              <label for="mod_nn_n" class="input-type-link">
+              Остаток от деления большего натурального
+                  числа на меньшее
+              </label> 
+
+              <div> 
+              <form onInput="mod_nn_n_handle();">
+
+              <input id="mod_nn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mod_nn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mod_nn_n_result" class="result"></span>
+
+              <script type="text/javascript">
+function mod_nn_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "mod_nn_n_n1").value);
+и  var number2 = MathLib.parseNumber(document.getElementById(
+        "mod_nn_n_n2").value);
+  var result = MathLib.mod_nn_n(number1, number2);
+  document.getElementById("mod_nn_n_result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
+
+             
               </li>
 
               <li>
-                <a class="input-type-link" >НОД натуральных чисел</a> 
+
+              <input type="checkbox" id="gcf_nn_n" class="hide"/>
+
+              <label for="gcf_nn_n" class="input-type-link">
+              НОД натуральных чисел
+              </label> 
+
+              <div> 
+              <form onInput="gcf_nn_n_handle();">
+
+              <input id="gcf_nn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="gcf_nn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="gcf_nn_n_result" class="result"></span>
+
+              <script type="text/javascript">
+function gcf_nn_n_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "gcf_nn_n_n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "gcf_nn_n_n2").value);
+  var result = MathLib.gcf_nn_n(number1, number2);
+  document.getElementById("gcf_nn_n_result").innerHTML = 
+    MathLib.numberToString(result);
+
+}
+
+              </script>
+
+              </div>
+
+
+             
               </li>
 
               <li>

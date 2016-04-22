@@ -38,3 +38,5 @@
 * sub_ndn_n
 * div_nn_dk
 * div_nn_n
+* mod_nn_n
+* gcf_nn_n
