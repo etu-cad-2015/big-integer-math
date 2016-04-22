@@ -23,4 +23,11 @@
 * gcf_nn_n
 * lcm_nn_n
 
+Целые числа:
+* poz_z_d
+* abs_n_z
+* mul_zm_z
+* trans_n_z
+* trans_z_n
+* add_zz_z
 Рациональные числа:

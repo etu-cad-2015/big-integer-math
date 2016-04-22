@@ -1,27 +1,31 @@
-function ADD_ZZ_Z(int A, int B){
-  var a=POZ_Z_D(A);
-  var b=POZ_Z_D(B);
-  if ((a!=1)||(b!=1))
-    return(ADD_NN_N(A,B));
-  if ((a!=2)||(b!=2)){
-    MUL_Z-_Z(A);
-    MUL_Z-_Z(B);
-    return(MUL_Z-_Z(ADD_NN_N(A,B)); 
-  }
-  else{
-    if (a==1){
-      if (COM_NN_D(ABS_Z_N(A,B)==2)
-	return(MUL_Z-_Z(SUB_NN_N(ABS_Z_N(A),B);
-      else
-  	return(SUB_NN_N(B,ABS_Z_N(A))
-    }
-    else
-      if (COM_NN_D(ABS_Z_N(B,A)==2)
-	return(MUL_Z-_Z(SUB_NN_N(ABS_Z_N(B),A);
-      else
-  	return(SUB_NN_N(B,ABS_Z_N(A))
-}
+MathLib.abs_z_n = function (n){
+    n1 = MathLib.cloneNumber(n);
+    n1.s = 1;
+    return n1;
+};
   
+MathLib.add_zz_z = function (n1, n2){
+    var a = MathLib.poz_z_d (n1);
+    var b = MathLib.poz_z_d (n2);
+    if (a!=1 && b!=1){
+	return MathLib.add_nn_n(n1, n2);
+    }else if (a!=1){
+	if (MathLib.com_nn_d (n1, n2)==2){
+	    return MathLib.sub_nn_n(n1, MathLib.abs_z_n(n2));
+	}else {
+	    return MathLib.mul_zm_z(MathLib.sub_nn_n(n1, MathLib.abs_z_n(n2)));
+	}
+    }else if (b!=1){
+	if (MathLib.com_nn_d (n1, n2)==2){
+	    return MathLib.mul_zm_z(MathLib.sub_nn_n(n2, MathLib.abs_z_n(n1)));
+	}else {
+	    return MathLib.sub_nn_n(n2, Mathlib.abs_z_n(n1));
+	}
+	
+    }else{
+	return MathLib.mul_zm_z(MathLib.add_nn_n(MathLib.abs_z_n(n1), MathLib.abs_z_n(n2)));
+    }
+};
         
 
   	
