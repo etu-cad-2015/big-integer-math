@@ -2,35 +2,18 @@
 =========================
 ![twiligt_math](http://img.wonkette.com/wp-content/uploads/2012/09/time-for-science.jpg)
 
-Готовые модули, стиль которых соответствует требованиям:
-
-* abs_z_n == trans_z_n
-* add_1n_n
-* add_nn_n
-* com_nn_d
-* deg_p_n // TODO: написать парсер
-* led_p_q
-* mul_nd_n
-* mul_nn_n
-* mul_zm_z
-* nmw_p_p
-* nzer_n_b
-* poz_z_d
-* red_q_q
-* trans_q_z
-* trans_z_q
-
-Готовые модули, которым не хватает зависимых модулей:
-
 
 Интегрированные модули (протестированно):
+=========================================
+
+Натуральные числа:
 * add_nn_n
 * add_1n_n
 * abs_z_n == trans_z_n
 * com_nn_d
 * nzer_n_b
 * sub_nn_n
-* mul_nd_n // TO-DO: проверка на цифру (хуйня, если второе - не цифра)
+* mul_nd_n // TO-DO: проверка на цифру (плохо, если второе - не цифра)
 * mul_nk_n
 * mul_nn_n
 * sub_ndn_n
@@ -39,3 +22,5 @@
 * mod_nn_n
 * gcf_nn_n
 * lcm_nn_n
+
+Рациональные числа:
