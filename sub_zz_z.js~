@@ -1,3 +1,0 @@
-Mathlib.sub_zz_z = function (n1, n2){
-    return Mathlib.add_zz_z (n1, Mathlib.mul_zm_z(n2));
-}

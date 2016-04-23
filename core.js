@@ -123,6 +123,57 @@ MathLib.parseFraction = function(str) {
 	});
 };
 
+// Внутренняя функция для считывания степени многочлена.
+// Как parseInt для основания 10, но считывает только положительные числа и не делает проверок.
+MathLib.parseNomDegree = function(str) {
+	var d = 0;
+	for (var i = 0; i < str.length; ++i) {
+		var code = str.charCodeAt(i);
+		if (code >= 48 && code <= 57) { // От 0 до 9.
+			d = d * 10 + (code - 48);
+		}
+	}
+	return d;
+};
+
+// Перевод строкового представления многочлена во внутреннее.
+// -- Кузьмин Виталий, 5302.
+MathLib.parsePolynom = function(str) {
+	var p = [];
+
+	var re = /^([\+-]?[^\+-]*)(.*)$/;
+	var noms;
+
+	while (str != null && str.length != 0) {
+		noms = re.exec(str); // Берём текущий член и всё, что после него.
+		str = noms[2]; // На следующем шаге продолжаем для следующего члена.
+		var nom = noms[1].split("x"); // Берём первый на данный момент член и разбиваем его на коэффициент и степень.
+
+		// Степень.
+		var deg = 0;
+		if (nom[1] != null) {
+			deg = Math.max(MathLib.parseNomDegree(nom[1]), 1);
+		}
+
+		// Коэффициент.
+		if (nom[0] == null) {
+			continue;
+		}
+		var coeff = MathLib.parseFraction(nom[0]);
+		if (coeff.p.d.length == 0) {
+			if (deg != 0) {
+				coeff = MathLib.cloneFraction(MathLib.ONE_FRACTION);
+			} else {
+				continue;
+			}
+		}
+
+		p[deg] = coeff;
+	}
+
+	return MathLib.finalizePolynom(p);
+};
+
 // Перевод числа в строковое представление, пригодное для показа пользователю.
 // -- Кузьмин Виталий, 5302.
 MathLib.numberToString = function(n) {
@@ -150,5 +201,37 @@ MathLib.numberToString = function(n) {
 // Перевод дроби в строковое представление.
 // -- Кузьмин Виталий, 5302.
 MathLib.fractionToString = function(f) {
+	if (f.q.d.length == 1 && f.q.d[0] == 1) {
+		// Знаменатель 1, выводим как целое.
+		return MathLib.numberToString(f.p);
+	}
+
 	return MathLib.numberToString(f.p) + "/" + MathLib.numberToString(f.q);
+};
+
+// Перевод многочлена в строковое представление.
+// -- Кузьмин Виталий, 5302.
+MathLib.polynomToString = function(p) {
+	var str = [];
+
+	for (var i = p.length; i-- > 0; ) {
+		var nom = p[i];
+		if (nom == null || nom.p.d.length == 0) { // Пропускаем несуществующие и нулевые коэффициенты.
+			continue;
+		}
+
+		if (str.length != 0 && nom.p.s > 0) { // Добавляем +, если надо, но не в начале вывода.
+			str.push("+");
+		}
+
+		str.push(MathLib.fractionToString(p[i]));
+		if (i > 0) {
+			str.push("x");
+			if (i > 1) {
+				str.push(i.toString());
+			}
+		}
+	}
+
+	return str.join("");
 };
