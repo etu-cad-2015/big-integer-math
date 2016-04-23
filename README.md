@@ -30,4 +30,9 @@
 * trans_n_z
 * trans_z_n
 * add_zz_z
+* sub_zz_z
+* mul_zz_z
+* div_zz_z
+* mod_zz_z
+
 Рациональные числа:

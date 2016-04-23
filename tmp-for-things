@@ -20,4 +20,8 @@ red_q_q
 sub_pp_p
 sub_qq_q
 trans_q_z
-trans_z_q 
+trans_z_q
+sub_zz_z
+mul_zz_z
+div_zz_z
+

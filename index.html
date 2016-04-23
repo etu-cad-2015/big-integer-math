@@ -903,58 +903,136 @@ function add_zz_z_handle() {
             </li>
 
             <li>
-              <a class="input-type-link" >Вычитание целых чисел</a>
-	       <!-- Пустой шаблон для сворачивающихся полей ввода -->
+	       <input type="checkbox" id="sub_zz_z" class="hide"/>
 
-              <input type="checkbox" id="ВСТАВИТЬ ID" class="hide"/>
-
-              <label for="ВСТАВИТЬ ID" class="input-type-link">
-              НАЗВАНИЕ МОДУЛЯ
+              <label for="sub_zz_z" class="input-type-link">
+          Вычитание целых чисел
               </label> 
 
               <div> 
-              <form onInput="ДЕЙСТВИЕ ПОСЛЕ ВВОДА ЧИСЕЛ">
-
-              <input id="ВСТАВИТЬ ID ПЕРВОГО ПОЛЯ" class="input-field" type="text" 
-                     placeholder="НАЗВАНИЕ ПЕРВОГО ПОЛЯ ВВОДА"/>
-              <input id="ВСТАВИТЬ ID ВТОРОГО ПОЛЯ" class="input-field" type="text" 
-                     placeholder="НАЗВАНИЕ ВТОРОГО ПОЛЯ ВВОДА"/>
+              <form onInput="sub_zz_z_handle()">
+              <input id="sub_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="sub_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
               </form>
               Ответ: 
-              <span id="УНИКАЛЬНЫЙ ID ДЛЯ ПОЛЯ РЕЗУЛЬТАТА" class="result"></span>
+              <span id="sub_zz_z_result" class="result"></span>
 
               <script type="text/javascript">
-function ДЕЙСТВИЕ_ПОСЛЕ_ВВОДА_ЧИСЕЛ() {
+function sub_zz_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
-        "ID_ПЕРВОГО_ПОЛЯ").value);
+        "sub_zz_z_n1").value);
   var number2 = MathLib.parseNumber(document.getElementById(
-        "ID_ВТОРОГО_ПОЛЯ").value);
-  var result = MathLib.НАЗВАНИЕ_ФУНКЦИИ_МОДУЛЯ_В_БИБЛИОТЕКЕ(number1, number2);
-  document.getElementById("ID_ПОЛЯ_РЕЗУЛЬТАТА").innerHTML = 
+        "sub_zz_z_n2").value);
+  var result = MathLib.sub_zz_z(number1, number2);
+  document.getElementById("sub_zz_z_result").innerHTML = 
     MathLib.numberToString(result);
-
 }
-
-              </script>
+      </script>
 
               </div>
 
-
-             
             </li>
 
             <li>
-              <a class="input-type-link" >Умножение целых чисел</a> 
+	       <input type="checkbox" id="mul_zz_z" class="hide"/>
+
+              <label for="mul_zz_z" class="input-type-link">
+             Умножение целых чисел
+              </label> 
+
+              <div> 
+              <form onInput="mul_zz_z_handle()">
+              <input id="mul_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mul_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mul_zz_z_result" class="result"></span>
+
+              <script type="text/javascript">
+function mul_zz_z_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "mul_zz_z_n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "mul_zz_z_n2").value);
+  var result = MathLib.mul_zz_z(number1, number2);
+  document.getElementById("mul_zz_z_result").innerHTML = 
+    MathLib.numberToString(result);
+}
+      </script>
+
+              </div>
+
             </li>
 
             <li>
-              <a class="input-type-link" >Частное от деления большего 
-                целого числа на меньшее или равное натуральное с остатком</a> 
+	       <input type="checkbox" id="div_zz_z" class="hide"/>
+
+              <label for="div_zz_z" class="input-type-link">
+            Частное от деления большего 
+                целого числа на меньшее или равное натуральное с остатком
+              </label> 
+
+              <div> 
+              <form onInput="div_zz_z_handle()">
+              <input id="div_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="div_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="div_zz_z_result" class="result"></span>
+
+              <script type="text/javascript">
+function div_zz_z_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "div_zz_z_n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "div_zz_z_n2").value);
+  var result = MathLib.div_zz_z(number1, number2);
+  document.getElementById("div_zz_z_result").innerHTML = 
+    MathLib.numberToString(result);
+}
+      </script>
+
+              </div>
+
             </li>
 
             <li>
-              <a class="input-type-link" >Остаток от деления большего
-                целого числа на меньшее или равное</a> 
+	       <input type="checkbox" id="mod_zz_z" class="hide"/>
+
+              <label for="mod_zz_z" class="input-type-link">
+          Остаток от деления большего
+                целого числа на меньшее или равное
+              </label> 
+
+              <div> 
+              <form onInput="mod_zz_z_handle();">
+              <input id="mod_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mod_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mod_zz_z_result" class="result"></span>
+
+              <script type="text/javascript">
+function mod_zz_z_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "mod_zz_z_n1").value);
+  var number2 = MathLib.parseNumber(document.getElementById(
+        "mod_zz_z_n2").value);
+  var result = MathLib.mod_zz_z(number1, number2);
+  document.getElementById("mod_zz_z_result").innerHTML = 
+    MathLib.numberToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
 
@@ -1021,6 +1099,7 @@ function ДЕЙСТВИЕ_ПОСЛЕ_ВВОДА_ЧИСЕЛ() {
 <script src="der_p_p.js" type="text/javascript"></script>
 <script src="div_nn_dk.js" type="text/javascript"></script>
 <script src="div_nn_n.js" type="text/javascript"></script>
+<script src="div_zz_z.js" type="text/javascript"></script>
 <script src="div_pp_p.js" type="text/javascript"></script>
 <script src="div_qq_q.js" type="text/javascript"></script>
 <script src="fac_p_pq.js" type="text/javascript"></script>
@@ -1038,6 +1117,7 @@ function ДЕЙСТВИЕ_ПОСЛЕ_ВВОДА_ЧИСЕЛ() {
 <script src="mul_pp_p.js" type="text/javascript"></script>
 <script src="mul_pxk_p.js" type="text/javascript"></script>
 <script src="mul_zm_z.js" type="text/javascript"></script>
+<script src="mul_zz_z.js" type="text/javascript"></script>
 <script src="nmw_p_p.js" type="text/javascript"></script>
 <script src="nzer_n_b.js" type="text/javascript"></script>
 <script src="poz_z_d.js" type="text/javascript"></script>
@@ -1045,6 +1125,7 @@ function ДЕЙСТВИЕ_ПОСЛЕ_ВВОДА_ЧИСЕЛ() {
 <script src="sub_ndn_n.js" type="text/javascript"></script>
 <script src="sub_nn_n.js" type="text/javascript"></script>
 <script src="sub_pp_p.js" type="text/javascript"></script>
+<script src="sub_zz_z.js" type="text/javascript"></script>
 <script src="sub_qq_q.js" type="text/javascript"></script>
 <script src="trans_q_z.js" type="text/javascript"></script>
 <script src="trans_z_n.js" type="text/javascript"></script>
