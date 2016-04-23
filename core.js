@@ -105,7 +105,7 @@ MathLib.parseNumber = function(str) {
 		var code = str.charCodeAt(i);
 		if (code >= 48 && code <= 57) { // От 0 до 9.
 			n.d.push(code - 48);
-		} else if (n.d.length == 0 && code == 45) { // Знак "минус" перед числом.
+		} else if (code == 45) { // Знак "минус".
 			n.s = -1;
 		}
 	}
@@ -121,7 +121,7 @@ MathLib.parseFraction = function(str) {
 		p: (parts[0] != null ? MathLib.parseNumber(parts[0]) : { d: [], s: 1 }),
 		q: (parts[1] != null ? MathLib.parseNumber(parts[1]) : { d: [1], s: 1 }),
 	});
-}
+};
 
 // Перевод числа в строковое представление, пригодное для показа пользователю.
 // -- Кузьмин Виталий, 5302.
