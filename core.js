@@ -201,5 +201,37 @@ MathLib.numberToString = function(n) {
 // Перевод дроби в строковое представление.
 // -- Кузьмин Виталий, 5302.
 MathLib.fractionToString = function(f) {
+	if (f.q.d.length == 1 && f.q.d[0] == 1) {
+		// Знаменатель 1, выводим как целое.
+		return MathLib.numberToString(f.p);
+	}
+
 	return MathLib.numberToString(f.p) + "/" + MathLib.numberToString(f.q);
+};
+
+// Перевод многочлена в строковое представление.
+// -- Кузьмин Виталий, 5302.
+MathLib.polynomToString = function(p) {
+	var str = [];
+
+	for (var i = p.length; i-- > 0; ) {
+		var nom = p[i];
+		if (nom == null || nom.p.d.length == 0) { // Пропускаем несуществующие и нулевые коэффициенты.
+			continue;
+		}
+
+		if (str.length != 0 && nom.p.s > 0) { // Добавляем +, если надо, но не в начале вывода.
+			str.push("+");
+		}
+
+		str.push(MathLib.fractionToString(p[i]));
+		if (i > 0) {
+			str.push("x");
+			if (i > 1) {
+				str.push(i.toString());
+			}
+		}
+	}
+
+	return str.join("");
 };
