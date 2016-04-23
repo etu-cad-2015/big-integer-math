@@ -41,9 +41,9 @@
               <form onInput="ДЕЙСТВИЕ ПОСЛЕ ВВОДА ЧИСЕЛ">
 
               <input id="ВСТАВИТЬ ID ПЕРВОГО ПОЛЯ" class="input-field" type="text" 
-              placeholder="НАЗВАНИЕ ПЕРВОГО ПОЛЯ ВВОДА"/>
+                     placeholder="НАЗВАНИЕ ПЕРВОГО ПОЛЯ ВВОДА"/>
               <input id="ВСТАВИТЬ ID ВТОРОГО ПОЛЯ" class="input-field" type="text" 
-              placeholder="НАЗВАНИЕ ВТОРОГО ПОЛЯ ВВОДА"/>
+                     placeholder="НАЗВАНИЕ ВТОРОГО ПОЛЯ ВВОДА"/>
               </form>
               Ответ: 
               <span id="УНИКАЛЬНЫЙ ID ДЛЯ ПОЛЯ РЕЗУЛЬТАТА" class="result"></span>
@@ -78,9 +78,9 @@ function ДЕЙСТВИЕ_ПОСЛЕ_ВВОДА_ЧИСЕЛ() {
                   <form onInput="com_nn_d_handle();">
 
                     <input id="com-nn-d-n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
+                           placeholder="Введите первое число"/>
                     <input id="com-nn-d-n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
+                           placeholder="Введите второе число"/>
                   </form>
                   Ответ: 
                   <span id="com-nn-d-result" class="result"></span>
@@ -121,15 +121,15 @@ function com_nn_d_handle() {
 
                 <label for="nzer-n-b" class="input-type-link">Проверка на ноль</label> 
 
-                <div>
+		 <div>
                   <form onInput="nzer_n_b_handle();">
 
                     <input id="nzer-n-b-n" class="input-field" type="text" 
-                                                               placeholder="Введите число"/>
+                           placeholder="Введите число"/>
                   </form>
                   Ответ: 
                   <span id="nzer-n-b-result" class="result"></span>
-                  <script type="text/javascript">
+            <script type="text/javascript">
 function nzer_n_b_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "nzer-n-b-n").value);
@@ -148,9 +148,9 @@ function nzer_n_b_handle() {
 }
 
                   </script>
-
-                </div>
-
+		  
+		  </div>
+                  
               </li> 
 
               <li>
@@ -165,7 +165,7 @@ function nzer_n_b_handle() {
                   <form onInput="add_1n_n_handle();">
 
                     <input id="add-1n-n-n1" class="input-field" type="text" 
-                                                                placeholder="Введите число"/>
+                           placeholder="Введите число"/>
                   </form>
                   Ответ: 
                   <span id="add-1n-n-result" class="result"></span>
@@ -197,9 +197,9 @@ function add_1n_n_handle() {
                   <form onInput="add_nn_n_handle();">
 
                     <input id="add-nn-n-n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
+                           placeholder="Введите первое число"/>
                     <input id="add-nn-n-n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
+                           placeholder="Введите второе число"/>
                   </form>
                   Ответ: 
                   <span id="add-nn-n-result" class="result"></span>
@@ -223,26 +223,26 @@ function add_nn_n_handle() {
               </li>
 
               <li>
+               
+		 <input type="checkbox" id="sub-nn-n" class="hide"/>
 
-                <input type="checkbox" id="sub-nn-n" class="hide"/>
+              <label for="sub-nn-n" class="input-type-link">
+              Вычитание из первого большего натурального числа второго меньшего или равного
+              </label> 
 
-                <label for="sub-nn-n" class="input-type-link">
-                  Вычитание из первого большего натурального числа второго меньшего или равного
-                </label> 
+              <div> 
+              <form onInput="sub_nn_n_handle();">
 
-                <div> 
-                  <form onInput="sub_nn_n_handle();">
+              <input id="sub-nn-n-n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="sub-nn-n-n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="sub-nn-n-result" class="result"></span>
 
-                    <input id="sub-nn-n-n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
-                    <input id="sub-nn-n-n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
-                  </form>
-                  Ответ: 
-                  <span id="sub-nn-n-result" class="result"></span>
-
-                  <script type="text/javascript">
-function sub_nn_n_handle() {
+              <script type="text/javascript">
+		function sub_nn_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "sub-nn-n-n1").value);
   var number2 = MathLib.parseNumber(document.getElementById(
@@ -253,31 +253,31 @@ function sub_nn_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
               </li>
 
               <li>
-                <input type="checkbox" id="mul-nd-n" class="hide"/>
+               <input type="checkbox" id="mul-nd-n" class="hide"/>
 
-                <label for="mul-nd-n" class="input-type-link">
-                  Умножение натурального числа на цифру
-                </label> 
+              <label for="mul-nd-n" class="input-type-link">
+              Умножение натурального числа на цифру
+              </label> 
 
-                <div> 
-                  <form onInput="mul_nd_n_handle();">
+              <div> 
+              <form onInput="mul_nd_n_handle();">
 
-                    <input id="mul-nd-n-n1" class="input-field" type="text" 
-                                                                placeholder="Введите число"/>
-                    <input id="mul-nd-n-n2" class="input-field" type="text" 
-                                                                placeholder="Введите цифрy"/>
-                  </form>
-                  Ответ: 
-                  <span id="mul-nd-n-result" class="result"></span>
+              <input id="mul-nd-n-n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              <input id="mul-nd-n-n2" class="input-field" type="text" 
+                     placeholder="Цифра"/>
+              </form>
+              Ответ: 
+              <span id="mul-nd-n-result" class="result"></span>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function mul_nd_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul-nd-n-n1").value);
@@ -289,73 +289,73 @@ function mul_nd_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
 
-
+            
               </li>
 
               <li>
+ 
 
+              <input type="checkbox" id="mul_nk_n" class="hide"/>
 
-                <input type="checkbox" id="mul_nk_n" class="hide"/>
+              <label for="mul_nk_n" class="input-type-link">
+              Умножение натурального числа на 10<sup>k</sup>
+              </label> 
 
-                <label for="mul_nk_n" class="input-type-link">
-                  Умножение натурального числа на 10<sup>k</sup>
-                </label> 
+              <div> 
+              <form onInput="mul_nk_n_handle();">
 
-                <div> 
-                  <form onInput="mul_nk_n_handle();">
+              <input id="mul-nk-n-n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              <input id="mul-nk-n-k" class="input-field" type="text" 
+                     placeholder="Степень десяти"/>
+              </form>
+              Ответ: 
+              <span id="mul-nk-n-result" class="result"></span>
 
-                    <input id="mul-nk-n-n1" class="input-field" type="text" 
-                                                                placeholder="Введите число"/>
-                    <input id="mul-nk-n-k" class="input-field" type="text" 
-                                                               placeholder="Введите степень десяти"/>
-                  </form>
-                  Ответ: 
-                  <span id="mul-nk-n-result" class="result"></span>
-
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function mul_nk_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul-nk-n-n1").value);
   var number2 = Number(document.getElementById(
-        "mul-nk-n-k").value);
-  var result = MathLib.mul_nk_n(number1, number2);
+"mul-nk-n-k").value);
+var result = MathLib.mul_nk_n(number1, number2);
   document.getElementById("mul-nk-n-result").innerHTML = 
-    MathLib.numberToString(result);
+MathLib.numberToString(result);
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
               </li>
 
               <li>
+                
 
+              <input type="checkbox" id="mul_nn_n" class="hide"/>
 
-                <input type="checkbox" id="mul_nn_n" class="hide"/>
+              <label for="mul_nn_n" class="input-type-link">
+              Умножение натуральных чисел
+              </label> 
 
-                <label for="mul_nn_n" class="input-type-link">
-                  Умножение натуральных чисел
-                </label> 
+              <div> 
+              <form onInput="mul_nn_n_handle();">
 
-                <div> 
-                  <form onInput="mul_nn_n_handle();">
+              <input id="mul-nn-n-n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mul-nn-n-n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mul-nn-n-result" class="result"></span>
 
-                    <input id="mul-nn-n-n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
-                    <input id="mul-nn-n-n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
-                  </form>
-                  Ответ: 
-                  <span id="mul-nn-n-result" class="result"></span>
-
-                  <script type="text/javascript">
-function mul_nn_n_handle() {
+              <script type="text/javascript">
+		function mul_nn_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul-nn-n-n1").value);
   var number2 = MathLib.parseNumber(document.getElementById(
@@ -366,42 +366,42 @@ function mul_nn_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
 
-
+             
               </li>
 
               <li>
-                <input type="checkbox" id="sub_ndn_n" class="hide"/>
+              <input type="checkbox" id="sub_ndn_n" class="hide"/>
 
-                <label for="sub_ndn_n" class="input-type-link">
-                  Вычитание из натурального другого 
+              <label for="sub_ndn_n" class="input-type-link">
+              Вычитание из натурального другого 
                   натурального, умноженного на цифру для случая с неотрицательным 
                   результатом
-                </label> 
+              </label> 
 
-                <div> 
-                  <form onInput="sub_ndn_n_handle();">
+              <div> 
+              <form onInput="sub_ndn_n_handle();">
 
-                    <input id="sub_ndn_n_n1" class="input-field" type="text" 
-                                                                 placeholder="Введите первое число"/>
-                    <input id="sub_ndn_n_n2" class="input-field" type="text" 
-                                                                 placeholder="Введите второе число"/>
-                    <input id="sub_ndn_n_k" class="input-field" type="text" 
-                                                                placeholder="Введите цифру"/>
-                  </form>
-                  Ответ: 
-                  <span id="sub_ndn_n_result" class="result"></span>
+              <input id="sub_ndn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="sub_ndn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+	       <input id="sub_ndn_n_k" class="input-field" type="text" 
+                     placeholder="k"/>
+              </form>
+              Ответ: 
+              <span id="sub_ndn_n_result" class="result"></span>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function sub_ndn_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "sub_ndn_n_n1").value);
   var number2 = MathLib.parseNumber(document.getElementById(
-        "sub_ndn_n_n2").value);
+"sub_ndn_n_n2").value);
   var k = Number(document.getElementById(
         "sub_ndn_n_k").value);
   var result = MathLib.sub_ndn_n(number1, k, number2);
@@ -410,41 +410,41 @@ function sub_ndn_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
 
-
+             
               </li>
 
               <li>
+        	 
+              <input type="checkbox" id="div_nn_dk" class="hide"/>
 
-                <input type="checkbox" id="div_nn_dk" class="hide"/>
-
-                <label for="div_nn_dk" class="input-type-link">
-                  Вычисление первой цифры деления большего
+              <label for="div_nn_dk" class="input-type-link">
+              Вычисление первой цифры деления большего
                   числе на меньшее, домноженное на 10<sup>k</sup>, где k - номер 
                   позиции этой цифры
-                </label> 
+              </label> 
 
-                <div> 
-                  <form onInput="div_nn_dk_handle();">
+              <div> 
+              <form onInput="div_nn_dk_handle();">
 
-                    <input id="div-nn-dk-n1" class="input-field" type="text" 
-                                                                 placeholder="Введите первое число"/>
-                    <input id="div-nn-dk-n2" class="input-field" type="text" 
-                                                                 placeholder="Введите второе число"/>
-                  </form>
-                  Ответ: 
-                  <span id="div-nn-dk-result" class="result"></span>
+              <input id="div-nn-dk-n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="div-nn-dk-n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="div-nn-dk-result" class="result"></span>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function div_nn_dk_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "div-nn-dk-n1").value);
   var number2 = MathLib.parseNumber(document.getElementById(
-        "div-nn-dk-n2").value);
+"div-nn-dk-n2").value);
 
   var result = MathLib.div_nn_dk(number1, number2);
   document.getElementById("div-nn-dk-result").innerHTML = 
@@ -452,33 +452,33 @@ function div_nn_dk_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
               </li>
 
               <li>
 
-                <input type="checkbox" id="div_nn_n" class="hide"/>
+              <input type="checkbox" id="div_nn_n" class="hide"/>
 
-                <label for="div_nn_n" class="input-type-link">
-                  Частное от деления большего натурального 
+              <label for="div_nn_n" class="input-type-link">
+              Частное от деления большего натурального 
                   числа на меньшее с остатком
-                </label> 
+              </label> 
 
-                <div> 
-                  <form onInput="div_nn_n_handle();">
+              <div> 
+              <form onInput="div_nn_n_handle();">
 
-                    <input id="div_nn_n_n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
-                    <input id="div_nn_n_n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
-                  </form>
-                  Ответ: 
-                  <span id="div_nn_n_result" class="result"></span>
+              <input id="div_nn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="div_nn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="div_nn_n_result" class="result"></span>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function div_nn_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "div_nn_n_n1").value);
@@ -490,35 +490,35 @@ function div_nn_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
 
-
+             
               </li>
 
               <li>
 
-                <input type="checkbox" id="mod_nn_n" class="hide"/>
+              <input type="checkbox" id="mod_nn_n" class="hide"/>
 
-                <label for="mod_nn_n" class="input-type-link">
-                  Остаток от деления большего натурального
+              <label for="mod_nn_n" class="input-type-link">
+              Остаток от деления большего натурального
                   числа на меньшее
-                </label> 
+              </label> 
 
-                <div> 
-                  <form onInput="mod_nn_n_handle();">
+              <div> 
+              <form onInput="mod_nn_n_handle();">
 
-                    <input id="mod_nn_n_n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
-                    <input id="mod_nn_n_n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
-                  </form>
-                  Ответ: 
-                  <span id="mod_nn_n_result" class="result"></span>
+              <input id="mod_nn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mod_nn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mod_nn_n_result" class="result"></span>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function mod_nn_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mod_nn_n_n1").value);
@@ -530,34 +530,34 @@ function mod_nn_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
 
-
+             
               </li>
 
               <li>
 
-                <input type="checkbox" id="gcf_nn_n" class="hide"/>
+              <input type="checkbox" id="gcf_nn_n" class="hide"/>
 
-                <label for="gcf_nn_n" class="input-type-link">
-                  НОД натуральных чисел
-                </label> 
+              <label for="gcf_nn_n" class="input-type-link">
+              НОД натуральных чисел
+              </label> 
 
-                <div> 
-                  <form onInput="gcf_nn_n_handle();">
+              <div> 
+              <form onInput="gcf_nn_n_handle();">
 
-                    <input id="gcf_nn_n_n1" class="input-field" type="text" 
-                                                                placeholder="Введите первое число"/>
-                    <input id="gcf_nn_n_n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
-                  </form>
-                  Ответ: 
-                  <span id="gcf_nn_n_result" class="result"></span>
+              <input id="gcf_nn_n_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="gcf_nn_n_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="gcf_nn_n_result" class="result"></span>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
 function gcf_nn_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "gcf_nn_n_n1").value);
@@ -569,12 +569,12 @@ function gcf_nn_n_handle() {
 
 }
 
-                  </script>
+              </script>
 
-                </div>
+              </div>
 
 
-
+             
               </li>
 
               <li>
@@ -588,10 +588,10 @@ function gcf_nn_n_handle() {
                   <form onInput="lcm_nn_n_handle();">
 
                     <input id="lcm-nn-n-n1" class="input-field" type="text"
-                                                                placeholder="Введите первое число"/>
+                           placeholder="Введите первое число"/>
 
                     <input id="lcm-nn-n-n2" class="input-field" type="text" 
-                                                                placeholder="Введите второе число"/>
+                           placeholder="Введите второе число"/>
                   </form>
                   Ответ: 
                   <span id="lcm-nn-n-result" class="result"></span>
@@ -731,19 +731,19 @@ function abs_z_n_handle() {
               <input type="checkbox" id="poz_z_d" class="hide"/>
 
               <label for="poz_z_d" class="input-type-link">
-                Определение положительности числа
+              Определение положительности числа
               </label> 
 
               <div> 
-                <form onInput="poz_z_d_handle();">
+              <form onInput="poz_z_d_handle();">
 
-                  <input id="poz_z_d_n1" class="input-field" type="text" 
-                                                             placeholder="Введите число"/>
-                </form>
-                Ответ: 
-                <span id="poz_z_d_result" class="result"></span>
+              <input id="poz_z_d_n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              </form>
+              Ответ: 
+              <span id="poz_z_d_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function poz_z_d_handle() {
   var number1 = MathLib.parseNumber(document.getElementById("poz_z_d_n1").value);
   var result = MathLib.poz_z_d(number1);
@@ -752,12 +752,12 @@ function poz_z_d_handle() {
 
 }
 
-                </script>
+              </script>
 
               </div>
 
 
-
+             
             </li>
 
             <li>
@@ -765,19 +765,19 @@ function poz_z_d_handle() {
               <input type="checkbox" id="mul_zm_z" class="hide"/>
 
               <label for="mul_zm_z" class="input-type-link">
-                Умножение целого на -1
+              Умножение целого на -1
               </label> 
 
               <div> 
-                <form onInput="mul_zm_z_handle();">
+              <form onInput="mul_zm_z_handle();">
 
-                  <input id="mul_zm_z_n1" class="input-field" type="text" 
-                                                              placeholder="Введите число"/>
-                </form>
-                Ответ: 
-                <span id="mul_zm_z_result" class="result"></span>
+              <input id="mul_zm_z_n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              </form>
+              Ответ: 
+              <span id="mul_zm_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function mul_zm_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul_zm_z_n1").value);
@@ -787,32 +787,32 @@ function mul_zm_z_handle() {
 
 }
 
-                </script>
+              </script>
 
               </div>
 
 
-
+             
             </li>
 
             <li>
-
+	      
               <input type="checkbox" id="trans_n_z" class="hide"/>
 
               <label for="trans_n_z" class="input-type-link">
-                Преобразование натурального в целое
+             Преобразование натурального в целое
               </label> 
 
               <div> 
-                <form onInput="trans_n_z_handle()">
+              <form onInput="trans_n_z_handle()">
 
-                  <input id="trans_n_z_n1" class="input-field" type="text" 
-                                                               placeholder="Введите число"/>
-                </form>
-                Ответ: 
-                <span id="trans_n_z_result" class="result"></span>
+              <input id="trans_n_z_n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              </form>
+              Ответ: 
+              <span id="trans_n_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function trans_n_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "trans_n_z_n1").value);
@@ -822,33 +822,33 @@ function trans_n_z_handle() {
 
 }
 
-                </script>
+              </script>
 
               </div>
 
 
-
+             
             </li>
 
             <li>
 
-
+              	      
               <input type="checkbox" id="trans_z_n" class="hide"/>
 
               <label for="trans_z_n" class="input-type-link">
-                Преобразование целого неотрицательного в натуральное
+		Преобразование целого неотрицательного в натуральное
               </label> 
 
               <div> 
-                <form onInput="trans_z_n_handle()">
+              <form onInput="trans_z_n_handle()">
 
-                  <input id="trans_z_n_n1" class="input-field" type="text" 
-                                                               placeholder="Введите число"/>
-                </form>
-                Ответ: 
-                <span id="trans_z_n_result" class="result"></span>
+              <input id="trans_z_n_n1" class="input-field" type="text" 
+                     placeholder="Число"/>
+              </form>
+              Ответ: 
+              <span id="trans_z_n_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function trans_z_n_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "trans_z_n_n1").value);
@@ -858,34 +858,34 @@ function trans_z_n_handle() {
 
 }
 
-                </script>
+              </script>
 
               </div>
 
 
 
-
+             
             </li>
 
             <li>
-
-              <input type="checkbox" id="add_zz_z" class="hide"/>
+       
+	       <input type="checkbox" id="add_zz_z" class="hide"/>
 
               <label for="add_zz_z" class="input-type-link">
-                Сложение целых чисел
+            Сложение целых чисел
               </label> 
 
               <div> 
-                <form onInput="add_zz_z_handle();">
-                  <input id="add_zz_z_n1" class="input-field" type="text" 
-                                                              placeholder="Введите первое число"/>
-                  <input id="add_zz_z_n2" class="input-field" type="text" 
-                                                              placeholder="Введите второе число"/>
-                </form>
-                Ответ: 
-                <span id="add_zz_z_result" class="result"></span>
+              <form onInput="add_zz_z_handle();">
+              <input id="add_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="add_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="add_zz_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function add_zz_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "add_zz_z_n1").value);
@@ -894,32 +894,32 @@ function add_zz_z_handle() {
   var result = MathLib.add_zz_z(number1, number2);
   document.getElementById("add_zz_z_result").innerHTML = MathLib.numberToString(result);
 }
-                </script>
+      </script>
 
               </div>
 
 
-
+             
             </li>
 
             <li>
-              <input type="checkbox" id="sub_zz_z" class="hide"/>
+	       <input type="checkbox" id="sub_zz_z" class="hide"/>
 
               <label for="sub_zz_z" class="input-type-link">
-                Вычитание целых чисел
+          Вычитание целых чисел
               </label> 
 
               <div> 
-                <form onInput="sub_zz_z_handle()">
-                  <input id="sub_zz_z_n1" class="input-field" type="text" 
-                                                              placeholder="Введите первое число"/>
-                  <input id="sub_zz_z_n2" class="input-field" type="text" 
-                                                              placeholder="Введите второе число"/>
-                </form>
-                Ответ: 
-                <span id="sub_zz_z_result" class="result"></span>
+              <form onInput="sub_zz_z_handle()">
+              <input id="sub_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="sub_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="sub_zz_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function sub_zz_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "sub_zz_z_n1").value);
@@ -929,30 +929,30 @@ function sub_zz_z_handle() {
   document.getElementById("sub_zz_z_result").innerHTML = 
     MathLib.numberToString(result);
 }
-                </script>
+      </script>
 
               </div>
 
             </li>
 
             <li>
-              <input type="checkbox" id="mul_zz_z" class="hide"/>
+	       <input type="checkbox" id="mul_zz_z" class="hide"/>
 
               <label for="mul_zz_z" class="input-type-link">
-                Умножение целых чисел
+             Умножение целых чисел
               </label> 
 
               <div> 
-                <form onInput="mul_zz_z_handle()">
-                  <input id="mul_zz_z_n1" class="input-field" type="text" 
-                                                              placeholder="Введите первое число"/>
-                  <input id="mul_zz_z_n2" class="input-field" type="text" 
-                                                              placeholder="Введите второе число"/>
-                </form>
-                Ответ: 
-                <span id="mul_zz_z_result" class="result"></span>
+              <form onInput="mul_zz_z_handle()">
+              <input id="mul_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mul_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mul_zz_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function mul_zz_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mul_zz_z_n1").value);
@@ -962,31 +962,31 @@ function mul_zz_z_handle() {
   document.getElementById("mul_zz_z_result").innerHTML = 
     MathLib.numberToString(result);
 }
-                </script>
+      </script>
 
               </div>
 
             </li>
 
             <li>
-              <input type="checkbox" id="div_zz_z" class="hide"/>
+	       <input type="checkbox" id="div_zz_z" class="hide"/>
 
               <label for="div_zz_z" class="input-type-link">
-                Частное от деления большего 
+            Частное от деления большего 
                 целого числа на меньшее или равное натуральное с остатком
               </label> 
 
               <div> 
-                <form onInput="div_zz_z_handle()">
-                  <input id="div_zz_z_n1" class="input-field" type="text" 
-                                                              placeholder="Введите первое число"/>
-                  <input id="div_zz_z_n2" class="input-field" type="text" 
-                                                              placeholder="Введите второе число"/>
-                </form>
-                Ответ: 
-                <span id="div_zz_z_result" class="result"></span>
+              <form onInput="div_zz_z_handle()">
+              <input id="div_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="div_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="div_zz_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function div_zz_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "div_zz_z_n1").value);
@@ -996,31 +996,31 @@ function div_zz_z_handle() {
   document.getElementById("div_zz_z_result").innerHTML = 
     MathLib.numberToString(result);
 }
-                </script>
+      </script>
 
               </div>
 
             </li>
 
             <li>
-              <input type="checkbox" id="mod_zz_z" class="hide"/>
+	       <input type="checkbox" id="mod_zz_z" class="hide"/>
 
               <label for="mod_zz_z" class="input-type-link">
-                Остаток от деления большего
+          Остаток от деления большего
                 целого числа на меньшее или равное
               </label> 
 
               <div> 
-                <form onInput="mod_zz_z_handle();">
-                  <input id="mod_zz_z_n1" class="input-field" type="text" 
-                                                              placeholder="Введите первое число"/>
-                  <input id="mod_zz_z_n2" class="input-field" type="text" 
-                                                              placeholder="Введите второе число"/>
-                </form>
-                Ответ: 
-                <span id="mod_zz_z_result" class="result"></span>
+              <form onInput="mod_zz_z_handle();">
+              <input id="mod_zz_z_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="mod_zz_z_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="mod_zz_z_result" class="result"></span>
 
-                <script type="text/javascript">
+              <script type="text/javascript">
 function mod_zz_z_handle() {
   var number1 = MathLib.parseNumber(document.getElementById(
         "mod_zz_z_n1").value);
@@ -1030,7 +1030,7 @@ function mod_zz_z_handle() {
   document.getElementById("mod_zz_z_result").innerHTML = 
     MathLib.numberToString(result);
 }
-                </script>
+      </script>
 
               </div>
             </li>
@@ -1349,4 +1349,5 @@ function div_qq_q_handle() {
   <script src="trans_z_n.js" type="text/javascript"></script>
   <script src="trans_z_q.js" type="text/javascript"></script>
   <script src="trans_n_z.js" type="text/javascript"></script>
+
 </body>
