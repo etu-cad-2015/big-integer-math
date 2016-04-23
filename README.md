@@ -36,3 +36,11 @@
 * mod_zz_z
 
 Рациональные числа:
+* red_q_q
+* int_q_b
+* trans_z_q
+* trans_q_z
+* add_qq_q
+* sub_qq_q
+* div_qq_q
+* mul_qq_q

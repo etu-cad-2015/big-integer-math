@@ -1017,7 +1017,7 @@ function div_zz_z_handle() {
               <input id="mod_zz_z_n2" class="input-field" type="text" 
                      placeholder="Второе число"/>
               </form>
-              Ответ: 
+и              Ответ: 
               <span id="mod_zz_z_result" class="result"></span>
 
               <script type="text/javascript">
@@ -1045,38 +1045,256 @@ function mod_zz_z_handle() {
 
 
             <li>
-              <a class="input-type-link" >Сокращение дроби</a>
+	      <input type="checkbox" id="red_q_q" class="hide"/>
+
+              <label for="red_q_q" class="input-type-link">
+              Сокращение дроби
+              </label> 
+
+              <div> 
+              <form onInput="red_q_q_handle()">
+              <input id="red_q_q_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="red_q_q_result" class="result"></span>
+
+              <script type="text/javascript">
+		function red_q_q_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "red_q_q_n1").value);
+  var result = MathLib.red_q_q(number1);
+  document.getElementById("red_q_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>
-              <a class="input-type-link" >Проверка, является ли число целым</a>
+    	       <input type="checkbox" id="int_q_b" class="hide"/>
+
+              <label for="int_q_b" class="input-type-link">
+              Проверка, является ли число целым
+              </label> 
+
+              <div> 
+              <form onInput="int_q_b_handle()">
+              <input id="int_q_b_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="int_q_b_result" class="result"></span>
+
+              <script type="text/javascript">
+function int_q_b_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "int_q_b_n1").value);
+var result = MathLib.int_q_b(number1);
+if (result == 0){
+  document.getElementById("int_q_b_result").innerHTML = "нецелое";
+}else{
+document.getElementById("int_q_b_result").innerHTML = "целое";
+}
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>
-              <a class="input-type-link" >Преобразование целого в дробное</a>
+	      <input type="checkbox" id="trans_z_q" class="hide"/>
+
+              <label for="trans_z_q" class="input-type-link">
+         Преобразование целого в дробное
+              </label> 
+
+              <div> 
+              <form onInput="trans_z_q_handle()">
+              <input id="trans_z_q_n1" class="input-field" type="text" 
+                     placeholder="Целое число"/>
+              </form>
+              Ответ: 
+              <span id="trans_z_q_result" class="result"></span>
+
+              <script type="text/javascript">
+function trans_z_q_handle() {
+  var number1 = MathLib.parseNumber(document.getElementById(
+        "trans_z_q_n1").value);
+  var result = MathLib.trans_z_q(number1);
+  document.getElementById("trans_z_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>
-              <a class="input-type-link" >Преобразование дробного в целое
-                (при знаменателе равном 1)</a>
+	       <input type="checkbox" id="trans_q_z" class="hide"/>
+
+              <label for="trans_q_z" class="input-type-link">
+    Преобразование дробного в целое
+                (при знаменателе равном 1)
+              </label> 
+
+              <div> 
+              <form onInput="trans_q_z_handle()">
+              <input id="trans_q_z_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="trans_q_z_result" class="result"></span>
+
+              <script type="text/javascript">
+function trans_q_z_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "trans_q_z_n1").value);
+var result = MathLib.trans_q_z(number1);
+if (result){
+  document.getElementById("trans_q_z_result").innerHTML = 
+MathLib.numberToString(result);
+}else{
+document.getElementById("trans_q_z_result").innerHTML = "знаменатель не ноль";
+}
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>
-              <a class="input-type-link" >Сложение дробей</a>
+	       <input type="checkbox" id="add_qq_q" class="hide"/>
+
+              <label for="add_qq_q" class="input-type-link">
+            Сложение дробей
+              </label> 
+
+              <div> 
+              <form onInput="add_qq_q_handle()">
+              <input id="add_qq_q_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              <input id="add_qq_q_n2" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="add_qq_q_result" class="result"></span>
+
+              <script type="text/javascript">
+function add_qq_q_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "add_qq_q_n1").value);
+  var number2 = MathLib.parseFraction(document.getElementById(
+        "add_qq_q_n2").value);
+  var result = MathLib.add_qq_q(number1, number2);
+  document.getElementById("add_qq_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>
-              <a class="input-type-link" >Вычитание дробей</a>
+         
+	      <input type="checkbox" id="sub_qq_q" class="hide"/>
+
+              <label for="sub_qq_q" class="input-type-link">
+          Вычитание дробей
+              </label> 
+
+              <div> 
+              <form onInput="sub_qq_q_handle()">
+              <input id="sub_qq_q_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              <input id="sub_qq_q_n2" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="sub_qq_q_result" class="result"></span>
+
+              <script type="text/javascript">
+function sub_qq_q_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "sub_qq_q_n1").value);
+  var number2 = MathLib.parseFraction(document.getElementById(
+        "sub_qq_q_n2").value);
+  var result = MathLib.sub_qq_q(number1, number2);
+  document.getElementById("sub_qq_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
             </li> 
+
 
             <li>
-              <a class="input-type-link" >Вычитание дробей</a>
+              
+	      <input type="checkbox" id="mul_qq_q" class="hide"/>
+
+              <label for="mul_qq_q" class="input-type-link">
+              Умножение дробей
+              </label> 
+
+              <div> 
+              <form onInput="mul_qq_q_handle()">
+              <input id="mul_qq_q_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              <input id="mul_qq_q_n2" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="mul_qq_q_result" class="result"></span>
+
+              <script type="text/javascript">
+function mul_qq_q_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "mul_qq_q_n1").value);
+  var number2 = MathLib.parseFraction(document.getElementById(
+        "mul_qq_q_n2").value);
+  var result = MathLib.mul_qq_q(number1, number2);
+  document.getElementById("mul_qq_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
             </li> 
 
-            <li>
-              <a class="input-type-link" >Умножение дробей</a>
-            </li> 
+	     <li>
+               
+	        <input type="checkbox" id="div_qq_q" class="hide"/>
 
+              <label for="div_qq_q" class="input-type-link">
+             Деление дробей
+              </label> 
+
+              <div> 
+              <form onInput="div_qq_q_handle()">
+              <input id="div_qq_q_n1" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              <input id="div_qq_q_n2" class="input-field" type="text" 
+                     placeholder="числитель/знаменатель"/>
+              </form>
+              Ответ: 
+              <span id="div_qq_q_result" class="result"></span>
+
+              <script type="text/javascript">
+function div_qq_q_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "div_qq_q_n1").value);
+  var number2 = MathLib.parseFraction(document.getElementById(
+        "div_qq_q_n2").value);
+  var result = MathLib.div_qq_q(number1, number2);
+  document.getElementById("div_qq_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
+            </li> 
 
           </ul>
         </div>
@@ -1115,6 +1333,7 @@ function mod_zz_z_handle() {
 <script src="mul_nk_n.js" type="text/javascript"></script>
 <script src="mul_nn_n.js" type="text/javascript"></script>
 <script src="mul_pp_p.js" type="text/javascript"></script>
+<script src="mul_qq_q.js" type="text/javascript"></script>
 <script src="mul_pxk_p.js" type="text/javascript"></script>
 <script src="mul_zm_z.js" type="text/javascript"></script>
 <script src="mul_zz_z.js" type="text/javascript"></script>

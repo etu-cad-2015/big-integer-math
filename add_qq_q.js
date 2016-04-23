@@ -2,18 +2,20 @@ MathLib.add_qq_q = function (qqA, qqB)
 {
 	// Сложение дробей
 	// Автор Духовой Владимир гр 5301
-	var A = []; 
-	var B = [];
-	A[0] = MathLib.cloneNumber(qqA[0]);
-	B[0] = MathLib.cloneNumber(qqB[0]);
-	A[1] = MathLib.cloneNumber(qqA[1]);
-	B[1] = MathLib.cloneNumber(qqB[1]);
+    var A = {}; 
+    var B = {};
+	A.p = MathLib.cloneNumber(qqA.p);
+	B.p = MathLib.cloneNumber(qqB.p);
+	A.q = MathLib.cloneNumber(qqA.q);
+	B.q = MathLib.cloneNumber(qqB.q);
 	// Входные дроби имеет вид : A = a/b и B = c/d
 	// Результируящая дробь имеет вид e/f
 	// Числитель полученной дроби e = a*НОК(b,d)+b*НОК(b,d)
-	A[0] = MathLib.add_zz_z(MathLib.mul_zz_z(A[0],MathLib.lcm_nn_n(A[1],B[1])),MathLib.mul_zz_z(B[0],MathLib.lcm_nn_n(A[1],B[1])));
+	//A.p = MathLib.add_zz_z(MathLib.mul_zz_z(A.p,MathLib.lcm_nn_n(A.q,B.q)),MathLib.mul_zz_z(B.p,MathLib.lcm_nn_n(A.q,B.q)));
 	// Знаменатель полученной дроби f = НОК(b,d)
-	A[1] = MathLib.lcm_nn_n(A[1],B[1]);
+    //	A.q = MathLib.lcm_nn_n(A.q,B.q);
+    A.p = MathLib.add_zz_z (MathLib.mul_zz_z(A.p, B.q), MathLib.mul_zz_z(B.p, A.q));
+    A.q = MathLib.mul_zz_z (A.q, B.q);
 	
-	return A;
+    return MathLib.red_q_q(A);
 } 
