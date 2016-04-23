@@ -67,6 +67,11 @@ MathLib.finalizeFraction = function(f) {
 	MathLib.finalizeNumber(f.p);
 	MathLib.finalizeNumber(f.q);
 
+	// Знаменатель не должен быть 0.
+	if (f.q.d.length == 0) {
+		f.q = MathLib.cloneNumber(MathLib.ONE);
+	}
+
 	// Знак должен быть только у числителя.
 	f.p.s *= f.q.s;
 	f.q.s = 1;
@@ -100,13 +105,23 @@ MathLib.parseNumber = function(str) {
 		var code = str.charCodeAt(i);
 		if (code >= 48 && code <= 57) { // От 0 до 9.
 			n.d.push(code - 48);
-		} else if (i == 0 && code == 45) { // Знак "минус" в первом символе.
+		} else if (n.d.length == 0 && code == 45) { // Знак "минус" перед числом.
 			n.s = -1;
 		}
 	}
 
 	return MathLib.finalizeNumber(n);
 };
+
+// Перевод строкового представления дробного числа во внутреннее.
+// -- Кузьмин Виталий, 5302.
+MathLib.parseFraction = function(str) {
+	var parts = str.split("/"); // До / - числитель, после - знаменатель.
+	return MathLib.finalizeFraction({
+		p: (parts[0] != null ? MathLib.parseNumber(parts[0]) : { d: [], s: 1 }),
+		q: (parts[1] != null ? MathLib.parseNumber(parts[1]) : { d: [1], s: 1 }),
+	});
+}
 
 // Перевод числа в строковое представление, пригодное для показа пользователю.
 // -- Кузьмин Виталий, 5302.
@@ -130,4 +145,10 @@ MathLib.numberToString = function(n) {
 	}
 
 	return str.join("");
+};
+
+// Перевод дроби в строковое представление.
+// -- Кузьмин Виталий, 5302.
+MathLib.fractionToString = function(f) {
+	return MathLib.numberToString(f.p) + "/" + MathLib.numberToString(f.q);
 };
