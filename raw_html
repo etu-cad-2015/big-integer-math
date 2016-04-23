@@ -201,3 +201,32 @@ function trans_z_q_handle() {
       </script>
 
               </div>
+ <input type="checkbox" id="int_q_b" class="hide"/>
+
+              <label for="int_q_b" class="input-type-link">
+              НАЗВАНИЕ МОДУЛЯ
+              </label> 
+
+              <div> 
+              <form onInput="int_q_b_handle()">
+              <input id="int_q_b_n1" class="input-field" type="text" 
+                     placeholder="Первое число"/>
+              <input id="int_q_b_n2" class="input-field" type="text" 
+                     placeholder="Второе число"/>
+              </form>
+              Ответ: 
+              <span id="int_q_b_result" class="result"></span>
+
+              <script type="text/javascript">
+function int_q_b_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "int_q_b_n1").value);
+  var number2 = MathLib.parseFraction(document.getElementById(
+        "int_q_b_n2").value);
+  var result = MathLib.int_q_b(number1, number2);
+  document.getElementById("int_q_b_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>

@@ -1,11 +1,10 @@
 MathLib.div_zz_z = function (n1, n2){
     var a = MathLib.poz_z_d(n1);
     var b = MathLib.poz_z_d(n2);
-    var zero = {d: [], s: 1};
     if (a == 0){	
-	return MathLib.finalizeNumber (zero);
+	return MathLib.ZERO;
     }else if (b == 0){
-	return MathLib.finalizeNumber (zero);
+	return MathLib.ZERO;
     }
     
     if (a == b){
