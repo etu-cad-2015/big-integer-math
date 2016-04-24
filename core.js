@@ -235,3 +235,22 @@ MathLib.polynomToString = function(p) {
 
 	return str.join("");
 };
+
+// Перевод обычного числа (степени многочлена) в длинное.
+// -- Кузьмин Виталий, 5302.
+MathLib.jsNumberToNumber = function(n) {
+	var r = { d: [], s: 1 };
+	if (n < 0) {
+		// Число отрицательное.
+		r.s = -1;
+		n = -n; // Округляется к 0 (как при переводе float в int).
+	}
+
+	n = Math.floor(n);
+	while (n != 0) {
+		r.d.push(n % 10);
+		n = Math.floor(n / 10);
+	}
+
+	return MathLib.finalizeNumber(r);
+};
