@@ -874,8 +874,36 @@ function mul_pp_p_handle() {
             </li>
 
             <li>
-              <a class="input-type-link" >Частное от деления многочлена на
-                многочлен при делении с остатком</a> 
+	       <input type="checkbox" id="div_pp_p" class="hide"/>
+
+              <label for="div_pp_p" class="input-type-link">
+              Частное от деления многочлена на
+                многочлен при делении с остатком
+              </label> 
+
+              <div> 
+              <form onInput="div_pp_p_handle()">
+              <input id="div_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Первый многочлен"/>
+              <input id="div_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Второй многочлен"/>
+              </form>
+              Ответ: 
+              <span id="div_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function div_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "div_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "div_pp_p_n2").value);
+  var result = MathLib.div_pp_p(number1, number2);
+  document.getElementById("div_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
