@@ -19,13 +19,13 @@ while read line; do
 
               <script type=\"text/javascript\">
 function ${line}_handle() {
-  var number1 = MathLib.parseFraction(document.getElementById(
+  var number1 = MathLib.parsePolynom(document.getElementById(
         \"${line}_n1\").value);
-  var number2 = MathLib.parseFraction(document.getElementById(
+  var number2 = MathLib.parsePolynom(document.getElementById(
         \"${line}_n2\").value);
   var result = MathLib.$line(number1, number2);
   document.getElementById(\"${line}_result\").innerHTML = 
-    MathLib.fractionToString(result);
+    MathLib.polynomToString(result);
 }
       </script>
 
