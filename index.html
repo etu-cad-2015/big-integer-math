@@ -842,7 +842,35 @@ function fac_p_pq_handle() {
             </li>
 
             <li>
-              <a class="input-type-link" >Умножение многочленов</a> 
+     	       <input type="checkbox" id="mul_pp_p" class="hide"/>
+
+              <label for="mul_pp_p" class="input-type-link">
+           Умножение многочленов
+              </label> 
+
+              <div> 
+              <form onInput="mul_pp_p_handle()">
+              <input id="mul_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Первый многочлен"/>
+              <input id="mul_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Второй многочлен"/>
+              </form>
+              Ответ: 
+              <span id="mul_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function mul_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "mul_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "mul_pp_p_n2").value);
+  var result = MathLib.mul_pp_p(number1, number2);
+  document.getElementById("mul_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
