@@ -54,3 +54,4 @@
 * led_p_q
 * fac_pq_p
 * mul_pp_p
+* der_pp_p
