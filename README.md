@@ -52,3 +52,4 @@
 * mul_pxk_p
 * deg_p_n
 * led_p_q
+* fac_pq_p
