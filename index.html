@@ -812,8 +812,33 @@ function deg_p_n_handle() {
             </li> 
 
             <li>
-              <a class="input-type-link" >Вынесение из многочлена НОК 
-                знаменателей коэффициентов и НОД числителей </a> 
+             
+	      <input type="checkbox" id="fac_p_pq" class="hide"/>
+
+              <label for="fac_p_pq" class="input-type-link">
+              Вынесение из многочлена НОК 
+              знаменателей коэффициентов и НОД числителей
+              </label> 
+
+              <div> 
+              <form onInput="fac_p_pq_handle()">
+              <input id="fac_p_pq_n1" class="input-field" type="text" 
+                     placeholder="многочлен"/>
+
+              </form>
+              Ответ: 
+              <span id="fac_p_pq_result" class="result"></span>
+
+              <script type="text/javascript">
+function fac_p_pq_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "fac_p_pq_n1").value);
+  var result = MathLib.fac_p_pq(number1);
+ document.getElementById("fac_p_pq_result").innerHTML =  MathLib.fractionToString(result)+"("+MathLib.polynomToString(number1)+")";
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
