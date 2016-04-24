@@ -724,15 +724,91 @@ function mul_pq_q_handle() {
             </li>
 
             <li>
-              <a class="input-type-link" >Умножение многочлена на x<sup>k</sup></a> 
+	       <input type="checkbox" id="mul_pxk_p" class="hide"/>
+
+              <label for="mul_pxk_p" class="input-type-link">
+             Умножение многочлена на x<sup>k</sup>
+              </label> 
+
+              <div> 
+              <form onInput="mul_pxk_p_handle()">
+              <input id="mul_pxk_p_n1" class="input-field" type="text" 
+                     placeholder="многочлен"/>
+              <input id="mul_pxk_p_n2" class="input-field" type="text" 
+                     placeholder="k"/>
+              </form>
+              Ответ: 
+              <span id="mul_pxk_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function mul_pxk_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "mul_pxk_p_n1").value);
+  var number2 = Number(document.getElementById(
+        "mul_pxk_p_n2").value);
+  var result = MathLib.mul_pxk_p(number1, number2);
+  document.getElementById("mul_pxk_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
-              <a class="input-type-link" >Старший коэффициент многочлена</a> 
+	       <input type="checkbox" id="led_p_q" class="hide"/>
+
+              <label for="led_p_q" class="input-type-link">
+            Старший коэффициент многочлена
+              </label> 
+
+              <div> 
+              <form onInput="led_p_q_handle()">
+              <input id="led_p_q_n1" class="input-field" type="text" 
+                     placeholder="многочлен"/>
+              </form>
+              Ответ: 
+              <span id="led_p_q_result" class="result"></span>
+
+              <script type="text/javascript">
+function led_p_q_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "led_p_q_n1").value);
+  var result = MathLib.led_p_q(number1);
+  document.getElementById("led_p_q_result").innerHTML = 
+    MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
-              <a class="input-type-link" >Степень многочлена</a>
+	      <input type="checkbox" id="deg_p_n" class="hide"/>
+
+              <label for="deg_p_n" class="input-type-link">
+           Степень многочлена
+              </label> 
+
+              <div> 
+              <form onInput="deg_p_n_handle()">
+              <input id="deg_p_n_n1" class="input-field" type="text" 
+                     placeholder="многочлен"/>
+              </form>
+              Ответ: 
+              <span id="deg_p_n_result" class="result"></span>
+
+              <script type="text/javascript">
+function deg_p_n_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "deg_p_n_n1").value);
+  var result = MathLib.deg_p_n(number1);
+  document.getElementById("deg_p_n_result").innerHTML = 
+    String(result);
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>

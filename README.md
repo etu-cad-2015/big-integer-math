@@ -49,3 +49,6 @@
 * add_pp_p
 * sub_pp_p
 * mul_pq_p
+* mul_pxk_p
+* deg_p_n
+* led_p_q
