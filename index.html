@@ -626,9 +626,35 @@ function lcm_nn_n_handle() {
 
             <li>
 
-              <input type="checkbox" id="hd-3" class="hide"/>
+	       <input type="checkbox" id="add_pp_p" class="hide"/>
 
-              <label for="hd-3" class="input-type-link">Сложение многочленов</label> 
+              <label for="add_pp_p" class="input-type-link">
+             Сложение многочленов
+              </label> 
+
+              <div> 
+              <form onInput="add_pp_p_handle()">
+              <input id="add_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Первый многочлен"/>
+              <input id="add_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Второй многочлен"/>
+              </form>
+              Ответ: 
+              <span id="add_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function add_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "add_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "add_pp_p_n2").value);
+  var result = MathLib.add_pp_p(number1, number2);
+  document.getElementById("add_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
 
             </li> 
 
@@ -1541,7 +1567,7 @@ function div_qq_q_handle() {
   <script src="core.js"      type="text/javascript"></script>
   <script src="add_1n_n.js"  type="text/javascript"></script>
   <script src="add_nn_n.js"  type="text/javascript"></script>
-  <script src="add_pp_p.js"  type="text/javascript"></script>
+  <script src="add_pp_p.js" type="text/javascript"></script>
   <script src="add_qq_q.js"  type="text/javascript"></script>
   <script src="add_zz_z.js"  type="text/javascript"></script>
   <script src="com_nn_d.js"  type="text/javascript"></script>
