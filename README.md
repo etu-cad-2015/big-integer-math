@@ -44,3 +44,8 @@
 * sub_qq_q
 * div_qq_q
 * mul_qq_q
+
+Многочлены:
+* add_pp_p
+* sub_pp_p
+* mul_pq_p

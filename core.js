@@ -159,10 +159,10 @@ MathLib.parsePolynom = function(str) {
 		if (nom[0] == null) {
 			continue;
 		}
-		var coeff = MathLib.parseFraction(nom[0]);
+	    var coeff = MathLib.parseFraction(nom[0]);
 		if (coeff.p.d.length == 0) {
 			if (deg != 0) {
-				coeff = MathLib.cloneFraction(MathLib.ONE_FRACTION);
+			    coeff = MathLib.cloneFraction(MathLib.ONE_FRACTION);
 			} else {
 				continue;
 			}
