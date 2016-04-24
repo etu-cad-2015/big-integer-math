@@ -907,21 +907,125 @@ function div_pp_p_handle() {
             </li>
 
             <li>
-              <a class="input-type-link" >Осток от деления многочлена 
-                на многочлен</a>
+	       <input type="checkbox" id="mod_pp_p" class="hide"/>
+
+              <label for="mod_pp_p" class="input-type-link">
+           Остаток от деления многочлена 
+                на многочлен
+              </label> 
+
+              <div> 
+              <form onInput="mod_pp_p_handle()">
+              <input id="mod_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Первый многочлен"/>
+              <input id="mod_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Второй многочлен"/>
+              </form>
+              Ответ: 
+              <span id="mod_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function mod_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "mod_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "mod_pp_p_n2").value);
+  var result = MathLib.mod_pp_p(number1, number2);
+  document.getElementById("mod_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li> 
 
             <li>
-              <a class="input-type-link" >НОД многочленов</a> 
+	       <input type="checkbox" id="gcf_pp_p" class="hide"/>
+
+              <label for="gcf_pp_p" class="input-type-link">
+           НОД многочленов
+              </label> 
+
+              <div> 
+              <form onInput="gcf_pp_p_handle()">
+              <input id="gcf_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Первый многочлен"/>
+              <input id="gcf_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Второй многочлен"/>
+              </form>
+              Ответ: 
+              <span id="gcf_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function gcf_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "gcf_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "gcf_pp_p_n2").value);
+  var result = MathLib.gcf_pp_p(number1, number2);
+  document.getElementById("gcf_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
-              <a class="input-type-link" >Производная многочлена</a> 
+	      <input type="checkbox" id="der_p_p" class="hide"/>
+
+              <label for="der_p_p" class="input-type-link">
+             Производная многочлена
+              </label> 
+
+              <div> 
+              <form onInput="der_p_p_handle()">
+              <input id="der_p_p_n1" class="input-field" type="text" 
+                     placeholder="многочлен"/>
+              </form>
+              Ответ: 
+              <span id="der_p_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function der_p_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "der_p_p_n1").value);
+  var result = MathLib.der_p_p(number1);
+  document.getElementById("der_p_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
             <li>
-              <a class="input-type-link" >Преобразование многочлена: кратные
-                корни в простые</a> 
+	       <input type="checkbox" id="nmw_p_p" class="hide"/>
+
+              <label for="nmw_p_p" class="input-type-link">
+            Преобразование многочлена: кратные
+                корни в простые
+              </label> 
+
+              <div> 
+              <form onInput="nmw_p_p_handle()">
+              <input id="nmw_p_p_n1" class="input-field" type="text" 
+                     placeholder="многочлен"/>
+              </form>
+              Ответ: 
+              <span id="nmw_p_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function nmw_p_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "nmw_p_p_n1").value);
+  var result = MathLib.nmw_p_p(number1);
+  document.getElementById("nmw_p_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
             </li>
 
 
