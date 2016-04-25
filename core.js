@@ -228,7 +228,7 @@ MathLib.polynomToString = function(p) {
 		if (i > 0) {
 			str.push("x");
 			if (i > 1) {
-				str.push(i.toString());
+				str.push("<sup>"+i.toString()+"</sup>");
 			}
 		}
 	}
