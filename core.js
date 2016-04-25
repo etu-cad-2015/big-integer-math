@@ -215,8 +215,13 @@ MathLib.fractionToString = function(f) {
 // Перевод многочлена в строковое представление.
 // -- Кузьмин Виталий, 5302.
 MathLib.polynomToString = function(p) {
-	var str = [];
-
+    var str = [];
+    
+     // если многочлен пустой, то сразу выводим ноль
+    if (p.length == 0){
+	return "0";
+    }
+    
 	for (var i = p.length; i-- > 0; ) {
 		var nom = p[i];
 		if (nom == null || nom.p.d.length == 0) { // Пропускаем несуществующие и нулевые коэффициенты.
@@ -237,6 +242,7 @@ MathLib.polynomToString = function(p) {
 			}
 		}
 	}
+   
 
 	return str.join("");
 };

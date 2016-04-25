@@ -4,15 +4,21 @@ MathLib.mod_pp_p = function ( M, N )
 {
 	// Если степень первого многочлена не меньше чем степень второго многочлена
 	if ( MathLib.deg_p_n (M) >= MathLib.deg_p_n (N))
-	{
+    {
+	var Mcp = [];
+	for (var i=0; i<M.length; i++){
+	    if (M[i] != null){
+		Mcp[i] = M[i];
+	    }
+	}
 		// Находим частное от деления первого многочлена на второй
 		var Q = MathLib.div_pp_p ( M, N );
 		// Находим произведение частного и второго многочлена
  		var T = MathLib.mul_pp_p ( Q, N );
  		// Находим остаток от деления многочленов, путём вычитания из первого многочлена произведения частного и второго многочлена
- 		var R = MathLib.sub_pp_p ( M, T );
+ 	var R = MathLib.sub_pp_p ( Mcp, T );
  	}
  	// Иначе остаток равен первому многочлену
  	else R = M;
- 	return R;
+    return MathLib.finalizePolynom(R);
  }
