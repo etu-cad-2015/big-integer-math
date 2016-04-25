@@ -55,3 +55,5 @@
 * fac_pq_p
 * mul_pp_p
 * der_pp_p
+* div_pp_p
+* mod_pp_p
