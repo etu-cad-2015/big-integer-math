@@ -163,6 +163,9 @@ MathLib.parsePolynom = function(str) {
 		if (coeff.p.d.length == 0) {
 			if (deg != 0) {
 			    coeff = MathLib.cloneFraction(MathLib.ONE_FRACTION);
+				if(nom[0].charCodeAt(0) == 45) { //Если стоит минус перед х
+					coeff.p.s = -1;
+				}
 			} else {
 				continue;
 			}
@@ -224,7 +227,7 @@ MathLib.polynomToString = function(p) {
 			str.push(" + ");
 		}
 
-    if (MathLib.fractionToString(p[i]) != "1"){
+    if (MathLib.fractionToString(p[i]) != "1" || i == 0) { //Коэффицент 1 не выводить, НО свободный член выводить всегда
 		  str.push(MathLib.fractionToString(p[i]));
     }
 		if (i > 0) {
