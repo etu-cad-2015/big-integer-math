@@ -221,7 +221,7 @@ MathLib.polynomToString = function(p) {
 		}
 
 		if (str.length != 0 && nom.p.s > 0) { // Добавляем +, если надо, но не в начале вывода.
-			str.push("+");
+			str.push(" + ");
 		}
 
     if (MathLib.fractionToString(p[i]) != "1"){
