@@ -1091,9 +1091,20 @@ function abs_z_n_handle() {
 function poz_z_d_handle() {
   var number1 = MathLib.parseNumber(document.getElementById("poz_z_d_n1").value);
   var result = MathLib.poz_z_d(number1);
-  document.getElementById("poz_z_d_result").innerHTML = 
-    Number(result);
+  switch (result) {
+    case 0: 
+      document.getElementById("poz_z_d_result").innerHTML = 
+        "Число не отрицательное и не положительное"; 
+      break;
+    case 1: 
+      document.getElementById("poz_z_d_result").innerHTML = "Число отрицательное";
+      break;
+    case 2: 
+      document.getElementById("poz_z_d_result").innerHTML = "Число положительное";
+      break;
 
+
+  }
 }
 
                 </script>
