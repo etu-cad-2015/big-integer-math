@@ -224,7 +224,9 @@ MathLib.polynomToString = function(p) {
 			str.push("+");
 		}
 
-		str.push(MathLib.fractionToString(p[i]));
+    if (MathLib.fractionToString(p[i]) != "1"){
+		  str.push(MathLib.fractionToString(p[i]));
+    }
 		if (i > 0) {
 			str.push("x");
 			if (i > 1) {
