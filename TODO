@@ -1,3 +1,0 @@
-1) Implement polynomial parsing
-2) Fix bug with MathLib.parseNumber: when passing fractions (1,2 1.2 1/2)
-it interprets them as ordinary numbers (12 12 12)

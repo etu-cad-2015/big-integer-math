@@ -95,15 +95,15 @@ function com_nn_d_handle() {
 
   switch ( result ) {
     case 0:
-      document.getElementById("com-nn-d-result").innerHTML = "они равны.";
+      document.getElementById("com-nn-d-result").innerHTML = "они равны";
       break;
 
     case 1:
-      document.getElementById("com-nn-d-result").innerHTML = "первое меньше.";
+      document.getElementById("com-nn-d-result").innerHTML = "первое меньше";
       break;
 
     case 2:
-      document.getElementById("com-nn-d-result").innerHTML = "второе меньше.";
+      document.getElementById("com-nn-d-result").innerHTML = "второе меньше";
       break;
 
   }
@@ -137,11 +137,11 @@ function nzer_n_b_handle() {
   var result = MathLib.nzer_n_b(number1);
   switch ( result ) {
     case false:
-      document.getElementById("nzer-n-b-result").innerHTML = "число ноль.";
+      document.getElementById("nzer-n-b-result").innerHTML = "число ноль";
       break;
 
     case true:
-      document.getElementById("nzer-n-b-result").innerHTML = "число не ноль.";
+      document.getElementById("nzer-n-b-result").innerHTML = "число не ноль";
       break;
   }
 
@@ -635,9 +635,9 @@ function lcm_nn_n_handle() {
               <div> 
               <form onInput="add_pp_p_handle()">
               <input id="add_pp_p_n1" class="input-field" type="text" 
-                     placeholder="Первый многочлен"/>
+                     placeholder="Введите 1-й многочлен"/>
               <input id="add_pp_p_n2" class="input-field" type="text" 
-                     placeholder="Второй многочлен"/>
+                     placeholder="Введите 2-й многочлен"/>
               </form>
               Ответ: 
               <span id="add_pp_p_result" class="result"></span>
@@ -668,9 +668,9 @@ function add_pp_p_handle() {
               <div> 
               <form onInput="sub_pp_p_handle()">
               <input id="sub_pp_p_n1" class="input-field" type="text" 
-                     placeholder="Первый многочлен"/>
+                     placeholder="Введите 1-й многочлен"/>
               <input id="sub_pp_p_n2" class="input-field" type="text" 
-                     placeholder="Второй многочлен"/>
+                     placeholder="Введите 2-й многочлен"/>
               </form>
               Ответ: 
               <span id="sub_pp_p_result" class="result"></span>
@@ -701,7 +701,7 @@ function sub_pp_p_handle() {
               <div> 
               <form onInput="mul_pq_q_handle()">
               <input id="mul_pq_q_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
               <input id="mul_pq_q_n2" class="input-field" type="text" 
                      placeholder="числитель/знаменатель"/>
               </form>
@@ -733,9 +733,9 @@ function mul_pq_q_handle() {
               <div> 
               <form onInput="mul_pxk_p_handle()">
               <input id="mul_pxk_p_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
               <input id="mul_pxk_p_n2" class="input-field" type="text" 
-                     placeholder="k"/>
+                     placeholder="Введите степень k"/>
               </form>
               Ответ: 
               <span id="mul_pxk_p_result" class="result"></span>
@@ -765,7 +765,7 @@ function mul_pxk_p_handle() {
               <div> 
               <form onInput="led_p_q_handle()">
               <input id="led_p_q_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
               </form>
               Ответ: 
               <span id="led_p_q_result" class="result"></span>
@@ -793,7 +793,7 @@ function led_p_q_handle() {
               <div> 
               <form onInput="deg_p_n_handle()">
               <input id="deg_p_n_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
               </form>
               Ответ: 
               <span id="deg_p_n_result" class="result"></span>
@@ -823,7 +823,7 @@ function deg_p_n_handle() {
               <div> 
               <form onInput="fac_p_pq_handle()">
               <input id="fac_p_pq_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
 
               </form>
               Ответ: 
@@ -851,9 +851,9 @@ function fac_p_pq_handle() {
               <div> 
               <form onInput="mul_pp_p_handle()">
               <input id="mul_pp_p_n1" class="input-field" type="text" 
-                     placeholder="Первый многочлен"/>
+                     placeholder="Введите 1-й многочлен"/>
               <input id="mul_pp_p_n2" class="input-field" type="text" 
-                     placeholder="Второй многочлен"/>
+                     placeholder="Введите 2-й многочлен"/>
               </form>
               Ответ: 
               <span id="mul_pp_p_result" class="result"></span>
@@ -884,9 +884,9 @@ function mul_pp_p_handle() {
               <div> 
               <form onInput="div_pp_p_handle()">
               <input id="div_pp_p_n1" class="input-field" type="text" 
-                     placeholder="Первый многочлен"/>
+                     placeholder="Введите 1-й многочлен"/>
               <input id="div_pp_p_n2" class="input-field" type="text" 
-                     placeholder="Второй многочлен"/>
+                     placeholder="Введите 2-й многочлен"/>
               </form>
               Ответ: 
               <span id="div_pp_p_result" class="result"></span>
@@ -917,9 +917,9 @@ function div_pp_p_handle() {
               <div> 
               <form onInput="mod_pp_p_handle()">
               <input id="mod_pp_p_n1" class="input-field" type="text" 
-                     placeholder="Первый многочлен"/>
+                     placeholder="Введите 1-й многочлен"/>
               <input id="mod_pp_p_n2" class="input-field" type="text" 
-                     placeholder="Второй многочлен"/>
+                     placeholder="Введите 2-й многочлен"/>
               </form>
               Ответ: 
               <span id="mod_pp_p_result" class="result"></span>
@@ -949,9 +949,9 @@ function mod_pp_p_handle() {
               <div> 
               <form onInput="gcf_pp_p_handle()">
               <input id="gcf_pp_p_n1" class="input-field" type="text" 
-                     placeholder="Первый многочлен"/>
+                     placeholder="Введите 1-й многочлен"/>
               <input id="gcf_pp_p_n2" class="input-field" type="text" 
-                     placeholder="Второй многочлен"/>
+                     placeholder="Введите 2-й многочлен"/>
               </form>
               Ответ: 
               <span id="gcf_pp_p_result" class="result"></span>
@@ -981,7 +981,7 @@ function gcf_pp_p_handle() {
               <div> 
               <form onInput="der_p_p_handle()">
               <input id="der_p_p_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
               </form>
               Ответ: 
               <span id="der_p_p_result" class="result"></span>
@@ -1010,7 +1010,7 @@ function der_p_p_handle() {
               <div> 
               <form onInput="nmw_p_p_handle()">
               <input id="nmw_p_p_n1" class="input-field" type="text" 
-                     placeholder="многочлен"/>
+                     placeholder="Введите многочлен"/>
               </form>
               Ответ: 
               <span id="nmw_p_p_result" class="result"></span>
@@ -1094,15 +1094,14 @@ function poz_z_d_handle() {
   switch (result) {
     case 0: 
       document.getElementById("poz_z_d_result").innerHTML = 
-        "Число не отрицательное и не положительное"; 
+        "число не отрицательное и не положительное"; 
       break;
     case 1: 
-      document.getElementById("poz_z_d_result").innerHTML = "Число отрицательное";
+      document.getElementById("poz_z_d_result").innerHTML = "число отрицательное";
       break;
     case 2: 
-      document.getElementById("poz_z_d_result").innerHTML = "Число положительное";
+      document.getElementById("poz_z_d_result").innerHTML = "число положительное";
       break;
-
 
   }
 }
@@ -1110,8 +1109,6 @@ function poz_z_d_handle() {
                 </script>
 
               </div>
-
-
 
             </li>
 
@@ -1468,7 +1465,7 @@ function int_q_b_handle() {
               <div> 
                 <form onInput="trans_z_q_handle()">
                   <input id="trans_z_q_n1" class="input-field" type="text" 
-                                                               placeholder="Целое число"/>
+                                                               placeholder="Введите число"/>
                 </form>
                 Ответ: 
                 <span id="trans_z_q_result" class="result"></span>
@@ -1507,10 +1504,10 @@ function trans_q_z_handle() {
   var number1 = MathLib.parseFraction(document.getElementById(
         "trans_q_z_n1").value);
   var result = MathLib.trans_q_z(number1);
-  if (result){
+  if (result) {
     document.getElementById("trans_q_z_result").innerHTML = 
       MathLib.numberToString(result);
-  }else{
+  } else {
     document.getElementById("trans_q_z_result").innerHTML = "знаменатель не ноль";
   }
 }
@@ -1664,7 +1661,7 @@ function div_qq_q_handle() {
   <script src="core.js"      type="text/javascript"></script>
   <script src="add_1n_n.js"  type="text/javascript"></script>
   <script src="add_nn_n.js"  type="text/javascript"></script>
-  <script src="add_pp_p.js" type="text/javascript"></script>
+  <script src="add_pp_p.js"  type="text/javascript"></script>
   <script src="add_qq_q.js"  type="text/javascript"></script>
   <script src="add_zz_z.js"  type="text/javascript"></script>
   <script src="com_nn_d.js"  type="text/javascript"></script>
@@ -1688,7 +1685,7 @@ function div_qq_q_handle() {
   <script src="mul_nk_n.js"  type="text/javascript"></script>
   <script src="mul_nn_n.js"  type="text/javascript"></script>
   <script src="mul_pp_p.js"  type="text/javascript"></script>
-   <script src="mul_pq_p.js"  type="text/javascript"></script>
+  <script src="mul_pq_p.js"  type="text/javascript"></script>
   <script src="mul_pxk_p.js" type="text/javascript"></script>
   <script src="mul_zm_z.js"  type="text/javascript"></script>
   <script src="mul_zz_z.js"  type="text/javascript"></script>
