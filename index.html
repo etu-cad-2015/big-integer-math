@@ -840,6 +840,7 @@ function fac_p_pq_handle() {
 
               </div>
             </li>
+<<<<<<< HEAD
 
             <li>
      	       <input type="checkbox" id="mul_pp_p" class="hide"/>
@@ -996,6 +997,191 @@ function der_p_p_handle() {
 }
       </script>
 
+=======
+
+            <li>
+     	       <input type="checkbox" id="mul_pp_p" class="hide"/>
+
+              <label for="mul_pp_p" class="input-type-link">
+           Умножение многочленов
+              </label> 
+
+              <div> 
+              <form onInput="mul_pp_p_handle()">
+              <input id="mul_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Введите 1-й многочлен"/>
+              <input id="mul_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Введите 2-й многочлен"/>
+              </form>
+              Ответ: 
+              <span id="mul_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function mul_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "mul_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "mul_pp_p_n2").value);
+  var result = MathLib.mul_pp_p(number1, number2);
+  document.getElementById("mul_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+>>>>>>> d5d63ea8eca403529ad34dbf939dab0919d7e0a2
+              </div>
+            </li>
+
+            <li>
+<<<<<<< HEAD
+	       <input type="checkbox" id="nmw_p_p" class="hide"/>
+
+              <label for="nmw_p_p" class="input-type-link">
+            Преобразование многочлена: кратные
+                корни в простые
+              </label> 
+
+              <div> 
+              <form onInput="nmw_p_p_handle()">
+              <input id="nmw_p_p_n1" class="input-field" type="text" 
+                     placeholder="Введите многочлен"/>
+              </form>
+              Ответ: 
+              <span id="nmw_p_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function nmw_p_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "nmw_p_p_n1").value);
+  var result = MathLib.nmw_p_p(number1);
+  document.getElementById("nmw_p_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+=======
+	       <input type="checkbox" id="div_pp_p" class="hide"/>
+
+              <label for="div_pp_p" class="input-type-link">
+              Частное от деления многочлена на
+                многочлен при делении с остатком
+              </label> 
+
+              <div> 
+              <form onInput="div_pp_p_handle()">
+              <input id="div_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Введите 1-й многочлен"/>
+              <input id="div_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Введите 2-й многочлен"/>
+              </form>
+              Ответ: 
+              <span id="div_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function div_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "div_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "div_pp_p_n2").value);
+  var result = MathLib.div_pp_p(number1, number2);
+  document.getElementById("div_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
+            </li>
+
+            <li>
+	       <input type="checkbox" id="mod_pp_p" class="hide"/>
+
+              <label for="mod_pp_p" class="input-type-link">
+           Остаток от деления многочлена 
+                на многочлен
+              </label> 
+
+              <div> 
+              <form onInput="mod_pp_p_handle()">
+              <input id="mod_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Введите 1-й многочлен"/>
+              <input id="mod_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Введите 2-й многочлен"/>
+              </form>
+              Ответ: 
+              <span id="mod_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function mod_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "mod_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "mod_pp_p_n2").value);
+  var result = MathLib.mod_pp_p(number1, number2);
+  document.getElementById("mod_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
+            </li> 
+
+            <li>
+	       <input type="checkbox" id="gcf_pp_p" class="hide"/>
+
+              <label for="gcf_pp_p" class="input-type-link">
+           НОД многочленов
+              </label> 
+
+              <div> 
+              <form onInput="gcf_pp_p_handle()">
+              <input id="gcf_pp_p_n1" class="input-field" type="text" 
+                     placeholder="Введите 1-й многочлен"/>
+              <input id="gcf_pp_p_n2" class="input-field" type="text" 
+                     placeholder="Введите 2-й многочлен"/>
+              </form>
+              Ответ: 
+              <span id="gcf_pp_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function gcf_pp_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "gcf_pp_p_n1").value);
+  var number2 = MathLib.parsePolynom(document.getElementById(
+        "gcf_pp_p_n2").value);
+  var result = MathLib.gcf_pp_p(number1, number2);
+  document.getElementById("gcf_pp_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
+              </div>
+            </li>
+
+            <li>
+	      <input type="checkbox" id="der_p_p" class="hide"/>
+
+              <label for="der_p_p" class="input-type-link">
+             Производная многочлена
+              </label> 
+
+              <div> 
+              <form onInput="der_p_p_handle()">
+              <input id="der_p_p_n1" class="input-field" type="text" 
+                     placeholder="Введите многочлен"/>
+              </form>
+              Ответ: 
+              <span id="der_p_p_result" class="result"></span>
+
+              <script type="text/javascript">
+function der_p_p_handle() {
+  var number1 = MathLib.parsePolynom(document.getElementById(
+        "der_p_p_n1").value);
+  var result = MathLib.der_p_p(number1);
+  document.getElementById("der_p_p_result").innerHTML = 
+    MathLib.polynomToString(result);
+}
+      </script>
+
               </div>
             </li>
 
@@ -1025,6 +1211,7 @@ function nmw_p_p_handle() {
 }
       </script>
 
+>>>>>>> d5d63ea8eca403529ad34dbf939dab0919d7e0a2
               </div>
             </li>
 
@@ -1397,31 +1584,6 @@ function mod_zz_z_handle() {
 
 
             <li>
-<<<<<<< HEAD
-	      <input type="checkbox" id="red_q_q" class="hide"/>
-
-              <label for="red_q_q" class="input-type-link">
-              Сокращение дроби
-              </label> 
-
-              <div> 
-              <form onInput="red_q_q_handle()">
-              <input id="red_q_q_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="red_q_q_result" class="result"></span>
-
-              <script type="text/javascript">
-		function red_q_q_handle() {
-  var number1 = MathLib.parseFraction(document.getElementById(
-        "red_q_q_n1").value);
-  var result = MathLib.red_q_q(number1);
-  document.getElementById("red_q_q_result").innerHTML = 
-    MathLib.fractionToString(result);
-}
-      </script>
-=======
               <input type="checkbox" id="red_q_q" class="hide"/>
 
               <label for="red_q_q" class="input-type-link">
@@ -1443,6 +1605,37 @@ function red_q_q_handle() {
   var result = MathLib.red_q_q(number1);
   document.getElementById("red_q_q_result").innerHTML = 
     MathLib.fractionToString(result);
+}
+      </script>
+
+              </div>
+            </li> 
+
+            <li>
+              <input type="checkbox" id="int_q_b" class="hide"/>
+
+              <label for="int_q_b" class="input-type-link">
+                Проверка, является ли число целым
+              </label> 
+
+              <div> 
+                <form onInput="int_q_b_handle()">
+                  <input id="int_q_b_n1" class="input-field" type="text" 
+                                                             placeholder="числитель/знаменатель"/>
+                </form>
+                Ответ: 
+                <span id="int_q_b_result" class="result"></span>
+
+                <script type="text/javascript">
+function int_q_b_handle() {
+  var number1 = MathLib.parseFraction(document.getElementById(
+        "int_q_b_n1").value);
+  var result = MathLib.int_q_b(number1);
+  if (result == 0){
+    document.getElementById("int_q_b_result").innerHTML = "нецелое";
+  }else{
+    document.getElementById("int_q_b_result").innerHTML = "целое";
+  }
 }
                 </script>
 
@@ -1475,41 +1668,11 @@ function int_q_b_handle() {
     document.getElementById("int_q_b_result").innerHTML = "целое";
   }
 }
-                </script>
->>>>>>> f600307... Fucked up with the files, lel
-
+      </script>
               </div>
             </li> 
 
             <li>
-<<<<<<< HEAD
-    	       <input type="checkbox" id="int_q_b" class="hide"/>
-
-              <label for="int_q_b" class="input-type-link">
-              Проверка, является ли число целым
-              </label> 
-
-              <div> 
-              <form onInput="int_q_b_handle()">
-              <input id="int_q_b_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="int_q_b_result" class="result"></span>
-
-              <script type="text/javascript">
-function int_q_b_handle() {
-  var number1 = MathLib.parseFraction(document.getElementById(
-        "int_q_b_n1").value);
-var result = MathLib.int_q_b(number1);
-if (result == 0){
-  document.getElementById("int_q_b_result").innerHTML = "нецелое";
-}else{
-document.getElementById("int_q_b_result").innerHTML = "целое";
-}
-}
-      </script>
-=======
               <input type="checkbox" id="trans_z_q" class="hide"/>
 
               <label for="trans_z_q" class="input-type-link">
@@ -1532,38 +1695,9 @@ function trans_z_q_handle() {
   document.getElementById("trans_z_q_result").innerHTML = 
     MathLib.fractionToString(result);
 }
-                </script>
->>>>>>> f600307... Fucked up with the files, lel
-
-              </div>
-            </li> 
-
-            <li>
-<<<<<<< HEAD
-	      <input type="checkbox" id="trans_z_q" class="hide"/>
-
-              <label for="trans_z_q" class="input-type-link">
-         Преобразование целого в дробное
-              </label> 
-
-              <div> 
-              <form onInput="trans_z_q_handle()">
-              <input id="trans_z_q_n1" class="input-field" type="text" 
-                     placeholder="Целое число"/>
-              </form>
-              Ответ: 
-              <span id="trans_z_q_result" class="result"></span>
-
-              <script type="text/javascript">
-function trans_z_q_handle() {
-  var number1 = MathLib.parseNumber(document.getElementById(
-        "trans_z_q_n1").value);
-  var result = MathLib.trans_z_q(number1);
-  document.getElementById("trans_z_q_result").innerHTML = 
-    MathLib.fractionToString(result);
-}
       </script>
-=======
+              </div>
+            </li>
               <input type="checkbox" id="trans_q_z" class="hide"/>
 
               <label for="trans_q_z" class="input-type-link">
@@ -1592,42 +1726,40 @@ function trans_q_z_handle() {
   }
 }
                 </script>
->>>>>>> f600307... Fucked up with the files, lel
 
               </div>
             </li> 
 
             <li>
-<<<<<<< HEAD
-	       <input type="checkbox" id="trans_q_z" class="hide"/>
+
+              <input type="checkbox" id="trans_q_z" class="hide"/>
 
               <label for="trans_q_z" class="input-type-link">
-    Преобразование дробного в целое
+                Преобразование дробного в целое
                 (при знаменателе равном 1)
               </label> 
 
               <div> 
-              <form onInput="trans_q_z_handle()">
-              <input id="trans_q_z_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="trans_q_z_result" class="result"></span>
+                <form onInput="trans_q_z_handle()">
+                  <input id="trans_q_z_n1" class="input-field" type="text" 
+                                                               placeholder="числитель/знаменатель"/>
+                </form>
+                Ответ: 
+                <span id="trans_q_z_result" class="result"></span>
 
-              <script type="text/javascript">
+                <script type="text/javascript">
 function trans_q_z_handle() {
   var number1 = MathLib.parseFraction(document.getElementById(
         "trans_q_z_n1").value);
-var result = MathLib.trans_q_z(number1);
-if (result){
-  document.getElementById("trans_q_z_result").innerHTML = 
-MathLib.numberToString(result);
-}else{
-document.getElementById("trans_q_z_result").innerHTML = "знаменатель не ноль";
-}
+  var result = MathLib.trans_q_z(number1);
+  if (result) {
+    document.getElementById("trans_q_z_result").innerHTML = 
+      MathLib.numberToString(result);
+  } else {
+    document.getElementById("trans_q_z_result").innerHTML = "знаменатель не ноль";
+  }
 }
       </script>
-=======
               <input type="checkbox" id="add_qq_q" class="hide"/>
 
               <label for="add_qq_q" class="input-type-link">
@@ -1655,42 +1787,11 @@ function add_qq_q_handle() {
     MathLib.fractionToString(result);
 }
                 </script>
->>>>>>> f600307... Fucked up with the files, lel
 
               </div>
             </li> 
 
             <li>
-<<<<<<< HEAD
-	       <input type="checkbox" id="add_qq_q" class="hide"/>
-
-              <label for="add_qq_q" class="input-type-link">
-            Сложение дробей
-              </label> 
-
-              <div> 
-              <form onInput="add_qq_q_handle()">
-              <input id="add_qq_q_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              <input id="add_qq_q_n2" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="add_qq_q_result" class="result"></span>
-
-              <script type="text/javascript">
-function add_qq_q_handle() {
-  var number1 = MathLib.parseFraction(document.getElementById(
-        "add_qq_q_n1").value);
-  var number2 = MathLib.parseFraction(document.getElementById(
-        "add_qq_q_n2").value);
-  var result = MathLib.add_qq_q(number1, number2);
-  document.getElementById("add_qq_q_result").innerHTML = 
-    MathLib.fractionToString(result);
-}
-      </script>
-=======
-
               <input type="checkbox" id="sub_qq_q" class="hide"/>
 
               <label for="sub_qq_q" class="input-type-link">
@@ -1718,43 +1819,12 @@ function sub_qq_q_handle() {
     MathLib.fractionToString(result);
 }
                 </script>
->>>>>>> f600307... Fucked up with the files, lel
 
               </div>
             </li> 
 
 
             <li>
-<<<<<<< HEAD
-         
-	      <input type="checkbox" id="sub_qq_q" class="hide"/>
-
-              <label for="sub_qq_q" class="input-type-link">
-          Вычитание дробей
-              </label> 
-
-              <div> 
-              <form onInput="sub_qq_q_handle()">
-              <input id="sub_qq_q_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              <input id="sub_qq_q_n2" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="sub_qq_q_result" class="result"></span>
-
-              <script type="text/javascript">
-function sub_qq_q_handle() {
-  var number1 = MathLib.parseFraction(document.getElementById(
-        "sub_qq_q_n1").value);
-  var number2 = MathLib.parseFraction(document.getElementById(
-        "sub_qq_q_n2").value);
-  var result = MathLib.sub_qq_q(number1, number2);
-  document.getElementById("sub_qq_q_result").innerHTML = 
-    MathLib.fractionToString(result);
-}
-      </script>
-=======
 
               <input type="checkbox" id="mul_qq_q" class="hide"/>
 
@@ -1784,66 +1854,46 @@ function mul_qq_q_handle() {
     MathLib.fractionToString(result);
 }
                 </script>
->>>>>>> f600307... Fucked up with the files, lel
 
               </div>
             </li> 
 
 
             <li>
-<<<<<<< HEAD
-              
-	      <input type="checkbox" id="mul_qq_q" class="hide"/>
+
+              <input type="checkbox" id="mul_qq_q" class="hide"/>
 
               <label for="mul_qq_q" class="input-type-link">
-              Умножение дробей
+                Умножение дробей
               </label> 
 
               <div> 
-              <form onInput="mul_qq_q_handle()">
-              <input id="mul_qq_q_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              <input id="mul_qq_q_n2" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="mul_qq_q_result" class="result"></span>
+                <form onInput="mul_qq_q_handle()">
+                  <input id="mul_qq_q_n1" class="input-field" type="text" 
+                                                              placeholder="числитель/знаменатель"/>
+                  <input id="mul_qq_q_n2" class="input-field" type="text" 
+                                                              placeholder="числитель/знаменатель"/>
+                </form>
+                Ответ: 
+                <span id="mul_qq_q_result" class="result"></span>
 
-              <script type="text/javascript">
+                <script type="text/javascript">
 function mul_qq_q_handle() {
   var number1 = MathLib.parseFraction(document.getElementById(
         "mul_qq_q_n1").value);
   var number2 = MathLib.parseFraction(document.getElementById(
         "mul_qq_q_n2").value);
+  console.log(number1, number2);
   var result = MathLib.mul_qq_q(number1, number2);
   document.getElementById("mul_qq_q_result").innerHTML = 
     MathLib.fractionToString(result);
 }
-      </script>
+                </script>
 
               </div>
             </li> 
 
-	     <li>
-               
-	        <input type="checkbox" id="div_qq_q" class="hide"/>
-
-              <label for="div_qq_q" class="input-type-link">
-             Деление дробей
-              </label> 
-
-              <div> 
-              <form onInput="div_qq_q_handle()">
-              <input id="div_qq_q_n1" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              <input id="div_qq_q_n2" class="input-field" type="text" 
-                     placeholder="числитель/знаменатель"/>
-              </form>
-              Ответ: 
-              <span id="div_qq_q_result" class="result"></span>
-
-              <script type="text/javascript">
-=======
+            <li>
 
               <input type="checkbox" id="div_qq_q" class="hide"/>
 
@@ -1861,8 +1911,7 @@ function mul_qq_q_handle() {
                 Ответ: 
                 <span id="div_qq_q_result" class="result"></span>
 
-                <script type="text/javascript">
->>>>>>> f600307... Fucked up with the files, lel
+              <script type="text/javascript">
 function div_qq_q_handle() {
   var number1 = MathLib.parseFraction(document.getElementById(
         "div_qq_q_n1").value);
@@ -1872,11 +1921,7 @@ function div_qq_q_handle() {
   document.getElementById("div_qq_q_result").innerHTML = 
     MathLib.fractionToString(result);
 }
-<<<<<<< HEAD
       </script>
-=======
-                </script>
->>>>>>> f600307... Fucked up with the files, lel
 
               </div>
             </li> 
