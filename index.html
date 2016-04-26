@@ -1453,36 +1453,6 @@ function int_q_b_handle() {
                   </li> 
 
                   <li>
-                    <input type="checkbox" id="int_q_b" class="hide"/>
-
-                    <label for="int_q_b" class="input-type-link">
-                      Проверка, является ли число целым
-                    </label> 
-
-                    <div> 
-                      <form onInput="int_q_b_handle()">
-                        <input id="int_q_b_n1" class="input-field" type="text" 
-                                                                   placeholder="числитель/знаменатель"/>
-                      </form>
-                      Ответ: 
-                      <span id="int_q_b_result" class="result"></span>
-
-                      <script type="text/javascript">
-function int_q_b_handle() {
-  var number1 = MathLib.parseFraction(document.getElementById(
-        "int_q_b_n1").value);
-  var result = MathLib.int_q_b(number1);
-  if (result == 0){
-    document.getElementById("int_q_b_result").innerHTML = "нецелое";
-  }else{
-    document.getElementById("int_q_b_result").innerHTML = "целое";
-  }
-}
-                      </script>
-                    </div>
-                  </li> 
-
-                  <li>
                     <input type="checkbox" id="trans_z_q" class="hide"/>
 
                     <label for="trans_z_q" class="input-type-link">
