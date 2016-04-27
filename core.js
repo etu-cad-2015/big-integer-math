@@ -217,32 +217,31 @@ MathLib.polynomToString = function(p) {
     
      // если многочлен пустой, то сразу выводим ноль
     if (p.length == 0){
-	return "0";
+		return "0";
     }
     
-	for (var i = p.length; i-- > 0; ) {
-		var nom = p[i];
-		if (nom == null || nom.p.d.length == 0) { // Пропускаем несуществующие и нулевые коэффициенты.
-			continue;
+	p.forEach(function(nom, deg, array) {
+		var tstr = [];
+
+		if ((deg + 1 != p.length) && nom.p.s > 0) { // Добавляем +, если надо, но не перед наивысшей степенью.
+			tstr.push("+");
 		}
 
-		if (str.length != 0 && nom.p.s > 0) { // Добавляем +, если надо, но не в начале вывода.
-			str.push(" + ");
+		if (deg == 0 || !(nom.p.d.length == 1 && nom.p.d[0] == 1 && nom.q.d.length == 1 && nom.q.d[0] == 1)) { //Коэффициент 1 не выводить, НО свободный член выводить всегда.
+			tstr.push(MathLib.fractionToString(nom));
 		}
 
-    if (MathLib.fractionToString(p[i]) != "1" || i == 0) { //Коэффицент 1 не выводить, НО свободный член выводить всегда
-		  str.push(MathLib.fractionToString(p[i]));
-    }
-		if (i > 0) {
-			str.push("x");
-			if (i > 1) {
-				str.push("<sup>"+i.toString()+"</sup>");
+		if (deg > 0) {
+			tstr.push("x");
+			if (deg > 1) {
+				tstr.push("<sup>" + deg +"</sup>");
 			}
 		}
-	}
-   
 
-	return str.join("");
+		str.push(tstr.join(""));
+	});
+
+	return str.reverse().join("");
 };
 
 // Перевод обычного числа (степени многочлена) в длинное.
