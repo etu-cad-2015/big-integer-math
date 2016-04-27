@@ -83,15 +83,9 @@ MathLib.finalizeFraction = function(f) {
 // -- Кузьмин Виталий, 5302.
 MathLib.finalizePolynom = function(p) {
 	// Убираем наивысшие члены, коэффициенты которых равны 0, чтобы длина массива отражала наивысший коэффициент.
-	for (var i = p.length; i-- > 0; ) {
-		var m = p[i];
-		if (p[i] != null && p[i].p.d.length != 0) {
-			break;
-		}
-		p.pop();
-	}
-
-	return p; // Чтобы можно было писать return в вызывающих функциях в одну строчку.
+	return p.filter(function(m) {
+		return m != null && m.p.d.length != 0;
+	});
 };
 
 // Перевод строкового представления (числа, введённого пользователем) в число.
