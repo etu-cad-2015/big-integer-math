@@ -228,6 +228,10 @@ MathLib.polynomToString = function(p) {
 	p.forEach(function(nom, deg, array) {
 		var tstr = [];
 
+		if (nom.p.d.length == 0) { // Игнорируем нулевые коэффициенты, если в модуле не используется finalizePolynom (чего по-хорошему быть не должно).
+			return;
+		}
+
 		if ((deg + 1 != p.length) && nom.p.s > 0) { // Добавляем +, если надо, но не перед наивысшей степенью.
 			tstr.push("+");
 		}
