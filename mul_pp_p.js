@@ -15,6 +15,6 @@ MathLib.mul_pp_p = function (firstPol, secondPol)
 	}
     }
 
-    return result;
+    return MathLib.finalizePolynom(result);
 };
     
