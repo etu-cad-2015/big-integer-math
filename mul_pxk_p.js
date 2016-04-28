@@ -4,5 +4,5 @@ MathLib.mul_pxk_p = function(p, k) {
 	for (var i = 0; i < k; i++) {
 		p.unshift(undefined);
 	}
-	return p;
+	return MathLib.finalizePolynom(p);
 }

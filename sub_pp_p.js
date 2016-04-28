@@ -15,6 +15,6 @@
 
 	      polinom1[i] = MathLib.sub_qq_q (MathLib.getPolynomCoefficient(polinom1, i), MathLib.getPolynomCoefficient(polinom2, i));
 	        }		
-      return polinom1;	
+      return MathLib.finalizePolynom(polinom1);
    
    };

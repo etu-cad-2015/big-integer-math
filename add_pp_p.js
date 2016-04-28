@@ -11,5 +11,5 @@ MathLib.add_pp_p = function (polinom1, polinom2) {
 
 	      polinom1[i] = MathLib.add_qq_q (MathLib.getPolynomCoefficient(polinom1, i), MathLib.getPolynomCoefficient(polinom2, i));
 	        }		
-      return polinom1;	
+      return MathLib.finalizePolynom(polinom1);
 	  };

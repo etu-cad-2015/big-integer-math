@@ -5,4 +5,5 @@ MathLib.mul_pq_p = function (p, k){
 	    p[i] = MathLib.mul_qq_q (p[i], k);
 	}
     }
+	return MathLib.finalizePolynom(p);
 };

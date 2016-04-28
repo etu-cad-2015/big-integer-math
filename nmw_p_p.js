@@ -22,5 +22,5 @@ MathLib.nmw_p_p = function(polinom)
 		polinom = r;
 	}
 	
-	return p;
+	return MathLib.finalizePolynom(p);
 };
