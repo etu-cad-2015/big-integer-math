@@ -45,13 +45,13 @@ html, body {
 .input-type {
   color: #ffffff;
   font-size: 16pt;
-  font-family: serif;
+  font-family: sans-serif;
   margin-bottom: 10px;
 }
 
 .input-type-link {
   color: #ffffff;
-  font-family: serif;
+  font-family: sans-serif;
 }
 
 .input-type-list {
